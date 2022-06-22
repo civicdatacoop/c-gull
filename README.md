@@ -81,6 +81,16 @@ The administration subsystem shall be related to actual management of the study.
 
 The administration subsystem shall operate with users in three tires: root (without any limitations), research administrator, research assistant (midwife, research nurse).
 
+The administration subsystem shall be accessible only to user with proper credentials (password protected).
+
+The research administrators shall be capable to review the work of research assistants, decide who is eligible for study and perform statistical queries.
+
+The research assistants shall be users with the lowest privilege levels, they shell be allowed to manage participants, arrange appointments, log all details related to their work and update personal information of each participant.
+
+The administrator subsystem shall simplify the work by allowing to apply filter to each participant (based on each filtrable criteria), filter participants by the stage of study and by appointment status, also to search participants based on all criteria.
+
+The administrator subsystem shall generate notification about possible new participants, and reminders about appointments.
+
 ## Performance requirements
 The latency in communication between internal back-end components shall not exceed 0.2 seconds (at probability quantile 0.99).
 
