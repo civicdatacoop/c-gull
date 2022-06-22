@@ -14,7 +14,7 @@ Version: 0.0.1
 ## Product overview
 C-GULL Study Management System (abbreviated as SMS) is the information system that helps to handle organizing participants of the study and stores important information about participants and about events related to each participant (like appointments, calls, notes). Children Grown-Up in Liverpool (C-GULL) is a longitudinal study focused on women who are pregnant for the first time. The estimate number of participants is 10000. The estimated number of contacted people is 30000. Technically, it is a web application that interacts with other components as visualized in the Figure 1.
 
-[CGULL_SMS_POSITION.png](CGULL_SMS_POSITION.png)
+![CGULL_SMS_POSITION.png](CGULL_SMS_POSITION.png)
 
 Figure 1: Position of Study Management System among other components
 
@@ -102,7 +102,7 @@ The system shall use token-based authentication.
 ## Logical database requirements
 The following (Figure 2) represents the overview of database logic.
 
-[CGULL_ERA.png](CGULL_ERA.png)
+![CGULL_ERA.png](CGULL_ERA.png)
 
 Figure 2: Simplified ERA model of database.
 
