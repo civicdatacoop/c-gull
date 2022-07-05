@@ -20,6 +20,10 @@ Figure 1: Position of Study Management System among other components. The eCRF c
 
 The SMS also provides helpful functionality that makes the study run smoothly (like printing labels for samples or generating Family IDs). In addition, it interacts with external entities: the K2 system that is used for import of potential participants; eCRF (probably implemented using REDCap) that is used for consent forms; the research environment is a database and protected environment that stores data for further analysis.
 
+# User Stories
+
+User stories can be found on the [Miro Board](https://miro.com/app/board/uXjVO4gWZbE=/)
+
 # System requirements
 
 ## Functions
