@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">Edit notes</div>
+        <a id="icon-person" class="fa fa-user" href="#"></a>
+        <div id="person-info">
+
+            <strong><a href="#">Joana F. Mills</a></strong>
+            <div class="clear"></div>
+            <a href="#">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-calendar"></em> Study phases</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <a href="#" class="button"><em class="fa fa-calendar"></em> &nbsp; Appointments</a>
+                <a href="notes.html" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Notes</a>
+            </form>
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's details</h2>
+                    <p>Here you can add or edit information about the participant (or potential participant).</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Notes:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Some note subject:</strong> Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+                            <div class="bordered-box">
+                                <h4>Add a new note</h4>
+                                <p class="no-top-m">Add a note related to XXX.</p>
+                                <label for="note_subject"><a href="#">Note subject: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Subject of the note (if relevant)</em></label>
+                                <input type="text" id="note_subject"
+                                    name="note_subject" placeholder="Note subject">
+                                <div class="clear">&nbsp;</div>
+                                <label for="note_text"><a href="#">Note*:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Note description/content.</em></label>
+                                <textarea id="note_text"
+                                    name="note_text"
+                                    placeholder="Note"></textarea>
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add note">
+                            </div>
+                        </div>
+
+                        <div class="big-box">
+                            <h3>Appointment notes:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Appointment note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Alert:</strong> person hang up without reason.</p>
+                                <a href="#" class="button"><em class="fa fa-link"></em> Go to appointment detail</a>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>

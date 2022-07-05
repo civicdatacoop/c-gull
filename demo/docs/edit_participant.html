@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit participant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">Edit participant</div>
+        <a id="icon-person" class="fa fa-user" href="#"></a>
+        <div id="person-info">
+
+            <strong><a href="#">Joana F. Mills</a></strong>
+            <div class="clear"></div>
+            <a href="#">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-calendar"></em> Study phases</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <a href="#" class="button"><em class="fa fa-calendar"></em> &nbsp; Appointments</a>
+                <a href="notes.html" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Notes</a>
+            </form>
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's details</h2>
+                    <p>Here you can add or edit information about the participant (or potential participant).</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Person identification</h3>
+                            <div class="bordered-box">
+                                <label for="study_id"><a href="#">Study ID* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Represents a unique ID assigned to the
+                                        study participant.</em></label>
+                                <input type="text" id="study_id" name="study_id" value="C3WA3QC1"
+                                    readonly class="disabled">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="nhs_number"><a href="#">NHS number* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Valid participant's NHS
+                                        number.</em></label>
+                                <input type="text" id="nhs_number" name="nhs_number"
+                                    placeholder="NHS number">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="first_name"><a href="#">First name <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's first name.</em></label>
+                                <input type="text" id="first_name" name="first_name"
+                                    placeholder="First name">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="middle_name"><a href="#">Middle name <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's middle
+                                        name.</em></label>
+                                <input type="text" id="middle_name" name="middle_name"
+                                    placeholder="Middle name">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="last_name"><a href="#">Last name* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's last name.</em></label>
+                                <input type="text" id="last_name" name="last_name"
+                                    placeholder="Last name">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="dob"><a href="#">Date of birth* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's date of
+                                        birth.</em></label>
+                                <input type="date" id="dob" name="dob" placeholder="Date of birth">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="dod"><a href="#">Day of death <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's death date (in case of
+                                        death).</em></label>
+                                <input type="date" id="dod" name="dod" placeholder="Date of death">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="main_language"><a href="#">First language <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's first language (to
+                                        identify language barriers), like English,
+                                        French.</em></label>
+                                <input type="text" id="main_language" name="main_language"
+                                    placeholder="First language">
+                            </div>
+                        </div>
+
+
+                        <div class="big-box">
+                            <h3>Contact information</h3>
+                            <div class="bordered-box">
+                                <label for="telephone_1"><a href="#">Telephone number 1*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Telephone contact number (like GSM,
+                                        landline).</em></label>
+                                <input type="text" id="telephone_1" name="telephone_1"
+                                    placeholder="Telephone number 1">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="telephone_2"><a href="#">Telephone number 2: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Alternative telephone contact number
+                                        (like
+                                        GSM, landline).</em></label>
+                                <input type="text" id="telephone_2" name="telephone_2"
+                                    placeholder="Telephone number 2">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="email"><a href="#">E-mail*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>E-mail address contact to the
+                                        participant.</em></label>
+                                <input type="email" id="email" name="email" placeholder="E-mail">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="title"><a href="#">Title*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Participant's title.</em></label>
+                                <select id="title" name="title">
+                                    <option disabled selected>Select title</option>
+                                    <option>Mr</option>
+                                    <option>Mrs</option>
+                                    <option>Miss</option>
+                                    <option>Ms</option>
+                                    <option>Dr</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="bordered-box">
+                                <label for="contact_comments"><a href="#">Comments related to
+                                        contact: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Various comments related to contact
+                                        details or possibilities of how to reach the participant,
+                                        etc.</em></label>
+                                <textarea id="contact_comments" name="contact_comments"
+                                    placeholder="Comments"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="big-box">
+                            <h3>Address history:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Address valid from 2020/04/07 to 2021/04/22
+                                </h4>
+                                <p>8, Whatever street, Liverpool, Marseyside, XYZ3 9NX,
+                                    UK</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+                            <div class="bordered-box">
+                                <p><a href="#" class="button"><em class="fa fa-plus"></em> Add a
+                                        new address</a></p>
+                                <h4 class="no-bottom-m">Create a new address</h4>
+                                <p class="no-top-m">Add a new address to the participant's
+                                    history.</p>
+                                <label for="new_address_from"><a href="#">From date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When did the person start to live at
+                                        this address?</em></label>
+                                <input type="date" id="new_address_from" name="new_address_from"
+                                    placeholder="From date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_to"><a href="#">To date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When did the person
+                                        leave?</em></label>
+                                <input type="date" id="new_address_to" name="new_address_to"
+                                    placeholder="To date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_still_live_here"><a href="#">Current
+                                        address: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Still live here?</em></label>
+                                <input type="checkbox" id="new_address_still_live_here"
+                                    name="new_address_still_live_here">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_house"><a href="#">House number (or the
+                                        first line): <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>First line of address.</em></label>
+                                <input type="text" id="new_address_house" name="new_address_house"
+                                    placeholder="House name/number">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_street"><a href="#">Street (or the second
+                                        line): <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Second line of address.</em></label>
+                                <input type="text" id="new_address_street"
+                                    name="new_address_street" placeholder="Street">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_city"><a href="#">City: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Name of the city
+                                        (municipality).</em></label>
+                                <input type="text" id="new_address_city" name="new_address_city"
+                                    placeholder="City">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_country"><a href="#">Country: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Name of the country (like UK, France,
+                                        Spain).</em></label>
+                                <input type="text" id="new_address_country"
+                                    name="new_address_country"
+                                    placeholder="Country (like UK, France, Spain)">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_region"><a href="#">Region: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Name of the larger region (like
+                                        Mersayside, Cheshire).</em></label>
+                                <input type="text" id="new_address_region"
+                                    name="new_address_region"
+                                    placeholder="Region (like Mersayside, Cheshire)">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_address_postcode"><a href="#">Postcode: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Postcode for the new address
+                                        (postcode, ZIP).</em></label>
+                                <input type="text" id="new_address_postcode"
+                                    name="new_address_postcode" placeholder="Postcode">
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Save address">
+                            </div>
+                        </div>
+
+                        <div class="big-box">
+                            <h3>Disability history:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Disability valid from 2020/04/07 to
+                                    2021/04/22
+                                </h4>
+                                <p>Mobility (moving and maintaining body positions, handling and
+                                    moving objects, moving around in the environment, moving around
+                                    using transportation).</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+                            <div class="bordered-box">
+                                <p><a href="#" class="button"><em class="fa fa-plus"></em> Add a
+                                        new disability</a></p>
+                                <h4 class="no-bottom-m">Create a new disability</h4>
+                                <p class="no-top-m">Add a new disability related to the
+                                    participant.</p>
+                                <label for="new_disability_from"><a href="#">From date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When did the person start to have this
+                                        disability?</em></label>
+                                <input type="date" id="new_disability_from"
+                                    name="new_disability_from" placeholder="From date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_disability_born"><a href="#">Inborn disability: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>The participant was born with this
+                                        disability.</em></label>
+                                <input type="checkbox" id="new_disability_born"
+                                    name="new_disability_born">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_disability_to"><a href="#">To date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When did this disability stop being
+                                        relevant?</em></label>
+                                <input type="date" id="new_disability_to" name="new_disability_to"
+                                    placeholder="To date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_disability_current"><a href="#">Current
+                                        disability: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Is this disability still
+                                        actual?</em></label>
+                                <input type="checkbox" id="new_disability_current"
+                                    name="new_disability_current">
+                                <div class="clear">&nbsp;</div>
+                                <label for="new_disability_description"><a href="#">Description:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Specification of
+                                        disability.</em></label>
+                                <textarea id="new_disability_description"
+                                    name="new_disability_description"
+                                    placeholder="Description of disability."></textarea>
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Save disability">
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>

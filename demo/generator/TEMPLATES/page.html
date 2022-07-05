@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	{% include "tag_header.html" %}
+    <section>
+        {% include "tag_menu.html" %}
+        {% include content_file %}
+    </section>
+    {% include "tag_footer.html" %}
+</body>
+
+</html>

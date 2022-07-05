@@ -1,0 +1,458 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #035154;
+    --gold: #A8A51E;
+    --third: #38B3F5;
+    --red: #c22626;
+    --red-dark: #672626;
+    --dark-background: #f4f4f4;
+    --font-main: #030303;
+    --font-href: #035154;
+    --font-highlight: #38B3F5;
+    --font-href-hover: #323232;
+    --border-line: #d9d9d9;
+    --table-label-background: #fbfbfb;
+    --note-red: #febebe;
+    --note-blue: #bee4fe;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-main);
+    font-size: 12pt;
+}
+
+a {
+    color: var(--font-href);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--font-href-hover);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--primary);
+}
+
+header>div {
+    display: inline-table;
+    vertical-align: middle;
+
+}
+
+#logo {
+    padding: 10pt 0 0 20pt;
+    font-size: 160%;
+}
+
+#page-nav-top {
+    border-left: 1pt solid var(--border-line);
+    padding: 0 0 0 10pt;
+    margin: 10pt 0 0 10pt;
+}
+
+#person-info {
+    text-align: right;
+    float: right;
+    font-size: 80%;
+    padding: 10pt 10pt 0 0;
+}
+
+#person-info>a {
+    color: var(--font-highlight);
+}
+
+#icon-person {
+    margin: 10pt 15pt 0 0;
+    padding: 2pt 5pt 3pt 5pt;
+    border-radius: 20pt;
+    float: right;
+    display: block;
+    background: var(--font-highlight);
+    color: var(--primary);
+}
+
+#icon-person:hover {
+    background: var(--gold);
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: var(--secondary);
+    margin-top: 10pt;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li a {
+    color: var(--primary);
+    background: var(--third);
+    display: inline-block;
+    padding: 5pt 10pt 5pt 10pt;
+    margin: 10pt 0pt 0pt 15pt;
+    border-top-left-radius: 5pt;
+    border-top-right-radius: 5pt;
+}
+
+nav ul li a:hover,
+nav ul li a.selected {
+    background: var(--gold);
+    color: var(--primary);
+}
+
+aside {
+    width: 100%;
+    background: var(--primary);
+    display: block;
+    padding: 10pt;
+}
+
+article {
+    background: var(--dark-background);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.button {
+    padding: 3pt 10pt 3pt 7pt;
+    background: var(--font-href);
+    color: var(--primary);
+    border: 1pt solid var(--font-href-hover);
+    border-radius: 10pt;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: var(--font-main);
+    color: var(--primary);
+}
+
+.button-red {
+    background: var(--red);
+    bottom: 1pt solid var(--dark-red);
+}
+
+.float-right {
+    float: right;
+}
+
+.icon-plus:before {
+    content: '+';
+}
+
+.icon-person:before {
+    content: '웃';
+}
+
+aside #action-box .button {
+    display: inline-block;
+    float: left;
+}
+
+aside #action-box {
+    display: block;
+    float: left;
+}
+
+aside #action-box input {
+    border: 1pt solid var(--font-main);
+    height: 21pt;
+    margin: 0;
+    display: block;
+    float: left;
+    padding: 0;
+}
+
+aside #action-box input[type=text] {
+    width: 150pt;
+    padding-left: 5pt;
+}
+
+aside #action-box input[type=submit] {
+    width: 21pt;
+    margin-left: 3pt;
+    color: var(--primary);
+    background: var(--font-href);
+}
+
+aside .button {
+    margin-left: 10pt;
+}
+
+article .main-table {
+    overflow-x: auto;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    min-height: 250pt;
+    border-collapse: collapse;
+}
+
+.main-table td,
+.main-table th {
+
+    border: 1pt solid var(--border-line);
+}
+
+.main-table th {
+    padding: 10pt;
+}
+
+.main-table td .cell {
+    padding: 10pt;
+    display: block;
+
+}
+
+.main-table tr td {
+    background: var(--primary);
+}
+
+.main-table tr td:first-child {
+    background: var(--table-label-background);
+}
+
+.main-table tr th:first-child,
+.main-table tr td:first-child {
+    text-align: center;
+}
+
+.main-table tbody tr:hover td {
+    background: var(--border-line);
+}
+
+.main-table th {
+    background: var(--table-label-background);
+    text-align: left;
+    border-bottom-width: 2pt;
+}
+
+.note-red {
+    background: var(--note-red);
+}
+
+.note-blue {
+    background: var(--note-blue);
+}
+
+.note-red,
+.note-blue {
+    padding: 4pt 5pt 4pt 5pt;
+    border-radius: 3pt;
+}
+
+article .legend {
+    padding: 5pt 0 10pt 10pt;
+}
+
+.pagination {
+    margin: auto;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.pagination ul li {
+    display: inline-block;
+}
+
+.pagination ul li a {
+    padding: 9pt 0 0 0;
+    background: var(--primary);
+    width: 30pt;
+    height: 30pt;
+    margin-bottom: 20pt;
+    display: block;
+}
+
+
+.pagination ul li.three-dots span {
+    padding: 9pt 0 0 0;
+    width: 30pt;
+    height: 30pt;
+    margin-bottom: 20pt;
+    display: block;
+}
+
+.pagination ul li a:hover,
+.pagination ul li a.selected {
+    background-color: var(--font-href);
+    color: var(--primary);
+}
+
+.pagination ul li .p-first {
+    margin-right: 15pt;
+}
+
+.pagination ul li .p-last {
+    margin-left: 15pt;
+}
+
+footer {
+    width: 100%;
+    padding: 20pt;
+    text-align: center;
+}
+
+section {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    padding: 10pt 20pt 10pt 20pt;
+    display: block;
+    min-height: 250pt;
+}
+
+.bordered-box {
+    border: 1pt solid var(--border-line);
+    padding: 10pt;
+    background: var(--primary);
+    margin-bottom: 20pt;
+}
+
+.bordered-box>h4:first-child {
+    margin-top: 0;
+}
+
+label {
+    width: 100%;
+    display: block;
+}
+
+.content input,
+.content select,
+.content textarea {
+    width: 95%;
+    max-width: 350pt;
+    border: 1pt solid var(--font-main);
+    margin: 0;
+    display: block;
+    padding: 0 5pt 0 5pt;
+}
+
+.content .big-box {
+    width: 100;
+    display: block;
+    padding: 5pt 5pt 0 5pt;
+    margin: 0 0 20pt 0;
+    border: 1pt solid var(--secondary);
+}
+
+.content .big-box>h3 {
+    margin-top: 0;
+}
+
+input.disabled {
+    background: var(--dark-background);
+}
+
+.content input,
+.content select {
+    height: 25pt;
+}
+
+.no-top-m {
+    margin-top: 0;
+}
+
+.no-bottom-m {
+    margin-bottom: 0;
+}
+
+.margin-left-10 {
+    margin-left: 10pt
+}
+
+.content textarea {
+    width: 95%;
+    min-height: 50pt;
+    max-width: 500pt;
+    padding-top: 3pt;
+}
+
+.content input[type=submit],
+.content input[type=button] {
+    max-width: 90pt;
+    margin-bottom: 15pt;
+    color: var(--primary);
+    background: var(--font-href);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    #icon-person {
+        display: none;
+    }
+
+    aside .toolbar {
+        width: 100%;
+        margin-top: 10pt;
+        float: left;
+    }
+
+    aside .toolbar a {
+        float: left;
+    }
+
+    a.p-ad {
+        display: none;
+    }
+
+    .pagination ul li.low-res-hide {
+        display: none;
+    }
+
+    .pagination ul li a {
+        width: 20pt;
+    }
+
+    #action-box .button {
+        margin-bottom: 10pt;
+    }
+}
