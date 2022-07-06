@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New study phase</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">New study phase</div>
+        <a id="icon-person" class="fa fa-user" href="#"></a>
+        <div id="person-info">
+
+            <strong><a href="#">Joana F. Mills</a></strong>
+            <div class="clear"></div>
+            <a href="#">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a  href="study_phases.html"><em class="fa fa-calendar"></em> Study phases</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <a href="new_phase.html" class="button"><em class="fa fa-calendar"></em> &nbsp; Phase</a>
+                <a href="locations.html" class="button"><em class="fa fa-map-marker"></em> &nbsp; Locations</a>
+            </form>
+
+            <div class="toolbar">
+
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Add new study phase</h2>
+                    <p>Here you can modify (add) a new study phase into the system. The study phase represents one of the study steps. From the participant's perspective, it is usually an appointment.</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Study phase definition</h3>
+
+                            <div class="bordered-box">
+                                <label for="phase_name"><a href="#">Phase name:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose appropriate name for the phase.</em></label>
+                                <input type="text" id="phase_name" name="phase_name"
+                                    placeholder="Phase name">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="relative_position"><a href="#">Relative position*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Relative position among other phases.</em></label>
+                                <select id="relative_position" name="relative_position">
+                                    <option disabled selected>Select relative position</option>
+                                    <option>NO RELATIVE POSITION</option>
+                                    <option>FIRST (insert before first)</option>
+                                    <option>LAST (insert after 5)</option>
+                                    <option>Insert before 2</option>
+                                    <option>Insert before 3</option>
+                                    <option>Insert before 4</option>
+                                </select>
+                            </div>
+                            <div class="bordered-box">
+                                <label for="phase_required"><a href="#">Required*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Defines whether this phase is compulsory.</em></label>
+                                <select id="phase_required" name="phase_required">
+                                    <option disabled selected>Select if the phase is required</option>
+                                    <option>Voluntary (participants can refuse)</option>
+                                    <option>Required to all (participants must attend)</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="ecrf_consent"><a href="#">eCRF or Consent*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Defines whether an eCRF (electronic case report form) form is required, a consent form is required, or nothing is required at this phase.</em></label>
+                                <select id="ecrf_consent" name="ecrf_consent">
+                                    <option disabled selected>Select what is required (eCRF, Consent, nothing)</option>
+                                    <option>eCRF (electronic case report form)</option>
+                                    <option>Consent form</option>
+                                    <option>Neither</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="in_person"><a href="#">In-person attendance*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Defines if the person has to arrive in person.</em></label>
+                                <select id="in_person" name="in_person">
+                                    <option disabled selected>Select if in-person attendance is required</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="samples_collection"><a href="#">Samples collection*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Defines if samples are collected at this appointment.</em></label>
+                                <select id="samples_collection" name="samples_collection">
+                                    <option disabled selected>Select if in-person attendance is required</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>

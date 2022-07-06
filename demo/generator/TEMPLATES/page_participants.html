@@ -1,12 +1,12 @@
 
         <aside>
             <form action="#" method="get" id="action-box">
-                <input type="text" placeholder="Search ...">
+                <input type="text" placeholder="Search for person...">
                 <input type="submit" value="🔎︎">
             </form>
             <div class="toolbar">
-                <a href="#" class="button icon-plus float-right"> Notes</a>
-                <a href="#" class="button icon-plus float-right"> Appointments</a>
+                <a href="#" class="button float-right"><em class="fa fa-filter"></em> Newcomer</a>
+                <a href="#" class="button float-right"><em class="fa fa-filter"></em> Action req.</a>
             </div>
             <div class="clear"></div>
         </aside>
@@ -22,8 +22,8 @@
                         <th><a href="#">Study number <em class="fa fa-caret-up"></em></a></th>
                         <th><a href="#">Source <em class="fa fa-caret-up"></em></a></th>
                         <th><a href="#">NHS number <em class="fa fa-caret-up"></em></a></th>
-                        <th><a href="#">Enrolled <em class="fa fa-caret-up"></em></a></th>
-                        <th><a href="#">Contacted <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Participant <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Action required <em class="fa fa-caret-up"></em></a></th>
                         <th><a href="#">Created <em class="fa fa-caret-up"></em></a></th>
                         <th><a href="#">Phone <em class="fa fa-caret-up"></em></a></th>
                         <th><a href="#">E-Mail <em class="fa fa-caret-up"></em></a></th>
@@ -48,8 +48,8 @@
                             {% endif %}
                         </a></td>
                         <td><a href="edit_participant.html" class="cell">{{ part['nhs_number'] }}</a></td>
-                        <td><a href="edit_participant.html" class="cell">{{ part['enrolled'] }}</a></td>
-                        <td><a href="edit_participant.html" class="cell">{{ part['contacted'] }}</a></td>
+                        <td><a href="edit_participant.html" class="cell">{{ part['is_participant'] }}</a></td>
+                        <td><a href="edit_participant.html" class="cell">{{ part['action_required'] }}</a></td>
                         <td><a href="edit_participant.html" class="cell">{{ part['created'] }}</a></td>
                         <td><a href="edit_participant.html" class="cell">{{ part['phone'] }}</a></td>
                         <td><a href="edit_participant.html" class="cell">{{ part['email'] }}</a></td>

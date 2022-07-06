@@ -5,6 +5,8 @@
     --third: #38B3F5;
     --red: #c22626;
     --red-dark: #672626;
+    --blue: #2690c2;
+    --blue-dark: #264c67;
     --dark-background: #f4f4f4;
     --font-main: #030303;
     --font-href: #035154;
@@ -171,6 +173,11 @@ article {
 .button-red {
     background: var(--red);
     bottom: 1pt solid var(--dark-red);
+}
+
+.button-blue {
+    background: var(--blue);
+    bottom: 1pt solid var(--dark-blue);
 }
 
 .float-right {

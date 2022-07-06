@@ -1,0 +1,47 @@
+<aside>
+            {% include "tag_person_top.html" %}
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Withdraw study participant</h2>
+                    <p>Here you can withdraw the participant (or potential participant from the study). Also, you can request to delete all data related to a person (based on the GDPR request).</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Withdraw of (potential) participant from study</h3>
+                            <div class="bordered-box">
+                                <label for="study_id"><a href="#">Study participant ID:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Represents a unique ID assigned to the
+                                        study participant.</em></label>
+                                <input type="text" id="study_id" name="study_id" value="C3WA3QC1"
+                                    readonly class="disabled">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="study_id"><a href="#">How to remove:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose whether to delete all data related to the person (GDPR-based request) or just opt-out person from the study (from now forwards).</em></label>
+                                <select id="study_phase" name="study_phase">
+                                    <option disabled selected>Select removing option</option>
+                                    <option>Delete all data related to participant (GDPR)</option>
+                                    <option>Keep collected data, but opt the person out</option>
+                                </select>
+                            </div>
+                            <div class="bordered-box">
+                                <label for="reason_opt_out"><a href="#">Reason*: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Why does the person want to opt-out?</em></label>
+                                <textarea id="reason_opt_out" name="reason_opt_out"
+                                    placeholder="Why does the person want to opt-out?"></textarea>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Withdraw">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>

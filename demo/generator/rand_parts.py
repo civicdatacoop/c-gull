@@ -4,6 +4,14 @@ from random import randrange
 from datetime import timedelta
 
 
+study_phases = [
+        'Initial interview',
+        'First pre-delivery visit',
+        'Second pre-delivery visit',
+        'Post dispatch follow-up'
+    ]
+
+
 def random_date() -> datetime.datetime:
     """
     This function will return a random datetime between two datetime
@@ -36,8 +44,8 @@ def random_participants(count: int = 10) -> list[dict]:
     study_numbers = ['A8J93K4L', 'C3WA3QC1', 'K8D2EQ3C', 'P9K4NS9A', 'D3HLD8LE']
     sources = ['K2', 'Volunteer']
     nhs_numbers = ['6442981355', '1395213089', '1678898600', '4600844858', '6690273245']
-    enrolleds = ['No', 'Yes']
-    contacteds = ['No', 'Yes']
+    is_participant = ['No', 'Yes', 'Pending']
+    action_required = ['No', 'Yes']
     languages = ['English', 'Spanish', 'Italian']
 
     participant = []
@@ -63,8 +71,8 @@ def random_participants(count: int = 10) -> list[dict]:
                 "study_number": random.choice(study_numbers),
                 "source": random.choice(sources),
                 "nhs_number": random.choice(nhs_numbers),
-                "enrolled": random.choice(enrolleds),
-                "contacted": random.choice(contacteds),
+                "is_participant": random.choice(is_participant),
+                "action_required": random.choice(action_required),
                 "language": random.choice(languages),
                 "address": random_address()
             }
@@ -73,12 +81,6 @@ def random_participants(count: int = 10) -> list[dict]:
 
 
 def random_person_appointments(count: int = 10) -> list[dict]:
-    study_phases = [
-        'Initial interview',
-        'First pre-delivery visit',
-        'Second pre-delivery visit',
-        'Post dispatch follow-up'
-    ]
     professionals = [
         'Joanna Mills',
         'Peter Johnson',
@@ -122,3 +124,22 @@ def random_person_appointments(count: int = 10) -> list[dict]:
         })
 
     return apps
+
+
+def random_study_phases(count: int = 10) -> list[dict]:
+    required_options = ['Voluntary', 'Compulsory']
+    ecrf_cons = ['eCRF form', 'Consent', 'Neither']
+    yes_no = ['yes', 'no']
+    phases = []
+    for pos in range(count):
+        phases.append({
+            'position': pos + 1,
+            'phase_name': random.choice(study_phases),
+            'relative_position': random.choice(['N/A', random.randint(1, 10)]),
+            'required': random.choice(required_options),
+            'ecrf_consent': random.choice(ecrf_cons),
+            'in_person': random.choice(yes_no),
+            'samples_collection': random.choice(yes_no),
+            'number_of_participants': random.randint(0, 30000),
+        })
+    return phases

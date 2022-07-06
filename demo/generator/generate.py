@@ -5,7 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 
 from dataclasses import dataclass
 
-from rand_parts import random_participants, random_person_appointments
+from rand_parts import random_participants, random_person_appointments, \
+    random_study_phases
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
@@ -55,7 +56,8 @@ class Page(object):
                 **dict(self),
                 link_to_homepage=link_to_homepage,
                 r_participants=random_participants(10),
-                r_person_appointments=random_person_appointments(10)
+                r_person_appointments=random_person_appointments(10),
+                r_study_phases=random_study_phases(10)
             )
             return html_str
 
@@ -83,7 +85,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="index",
-         content_file='page_list.html',
+         content_file='page_participants.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Imported patients"
@@ -123,6 +125,33 @@ pages = [
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Appointment editor"
+         ),
+    Page(title="Withdraw participant",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="withdraw",
+         content_file='page_withdraw.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Withdraw participant"
+         ),
+    Page(title="Study phases",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="study_phases",
+         content_file='page_study_phases.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Study phases"
+         ),
+    Page(title="New study phase",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="new_phase",
+         content_file='page_new_phase.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="New study phase"
          ),
 ]
 

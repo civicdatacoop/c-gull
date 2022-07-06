@@ -1,0 +1,77 @@
+
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <input type="text" placeholder="Search for study phase ...">
+                <input type="submit" value="🔎︎">
+            </form>
+            <div class="toolbar">
+                <a href="new_phase.html" class="button float-right"> <em class="fa fa-plus"></em> New phase </a>
+                <a href="locations.html" class="button float-right"> <em class="fa fa-map-marker"></em> Locations </a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+
+        <article>
+            <table class="main-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a href="#">Phase name <em class="fa fa-caret-down"></em> </a></th>
+                        <th><a href="#">Relative position <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Required <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">eCRF / Consent <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">In-person <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Samples collection <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#"># affected participants <em class="fa fa-caret-up"></em></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for phase in r_study_phases %}
+                    <tr>
+                        <td>{{ phase['position'] }}</td>
+                        <td><a href="new_phase.html" class="cell">{{ phase['phase_name'] }}</a></td>
+                        <td><a href="new_phase.html" class="cell">{{ phase['relative_position'] }}</a></td>
+                        <td><a href="new_phase.html" class="cell">{{ phase['required'] }}</a></td>
+                        <td><a href="new_phase.html" class="cell">{{ phase['ecrf_consent'] }}</a></td>
+                        <td><a href="new_phase.html" class="cell">
+                            {% if phase['in_person'] == "yes" %}
+                            <span class="note-blue">yes</span>
+                            {% else %}
+                            <span class="note-red">no</span>
+                            {% endif %}
+                        </a></td>
+                        <td><a href="new_phase.html" class="cell">
+                            {% if phase['samples_collection'] == "yes" %}
+                            <span class="note-blue">yes</span>
+                            {% else %}
+                            <span class="note-red">no</span>
+                            {% endif %}
+                        </a></td>
+                        <td><a href="new_phase.html" class="cell">{{ phase['number_of_participants'] }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="legend">
+                Total: 30 entries
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li><a href="#" class="p-first"><em class="fa fa-chevron-left"></em></a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li class="low-res-hide"><a href="#">28</a></li>
+                    <li><a href="#">29</a></li>
+                    <li><a href="#" class="selected">30</a></li>
+                    <li><a href="#">31</a></li>
+                    <li class="low-res-hide"><a href="#">32</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li><a href="#">60</a></li>
+                    <li><a href="#" class="p-last"><em class="fa fa-chevron-right"></em></a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </article>
