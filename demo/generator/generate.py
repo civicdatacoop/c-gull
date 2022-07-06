@@ -13,7 +13,7 @@ PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
 # Path to RESOURCES folder (relative to where you run the script)
 PATH_TO_RESOURCES = Path('../generator/RESOURCES/')
 # Path to output folder (relative to where you run the script)
-PATH_TO_OUTPUT = Path('../docs/')
+PATH_TO_OUTPUT = Path('../../docs/')
 # Root URL
 URL_ROOT = "https://civicdatacooperative.com/"
 
