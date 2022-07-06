@@ -5,7 +5,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from dataclasses import dataclass
 
-from rand_parts import random_participants
+from rand_parts import random_participants, random_person_appointments
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
@@ -54,7 +54,8 @@ class Page(object):
             html_str = template.render(
                 **dict(self),
                 link_to_homepage=link_to_homepage,
-                r_participants=random_participants(10)
+                r_participants=random_participants(10),
+                r_person_appointments=random_person_appointments(10)
             )
             return html_str
 
@@ -104,6 +105,24 @@ pages = [
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Edit notes"
+         ),
+    Page(title="Person's appointments",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="person_appointment",
+         content_file='page_person_appointment.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Person's appointments"
+         ),
+    Page(title="Person's appointment editor",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="edit_person_appointment",
+         content_file='page_edit_person_appointment.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Appointment editor"
          ),
 ]
 

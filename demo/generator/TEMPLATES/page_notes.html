@@ -1,8 +1,5 @@
 <aside>
-            <form action="#" method="get" id="action-box">
-                <a href="#" class="button"><em class="fa fa-calendar"></em> &nbsp; Appointments</a>
-                <a href="notes.html" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Notes</a>
-            </form>
+            {% include "tag_person_top.html" %}
             <div class="toolbar">
                 <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
             </div>
@@ -25,6 +22,11 @@
                                         class="fa fa-trash"></em>
                                     Delete</a>
                             </div>
+
+                            <div class="bordered-box">
+                                <a href="#" class="button"><em class="fa fa-sticky-note"></em> Add a new note</a>
+                            </div>
+
                             <div class="bordered-box">
                                 <h4>Add a new note</h4>
                                 <p class="no-top-m">Add a note related to XXX.</p>

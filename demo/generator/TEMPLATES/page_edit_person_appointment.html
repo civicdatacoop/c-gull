@@ -1,0 +1,197 @@
+<aside>
+            {% include "tag_person_top.html" %}
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's details</h2>
+                    <p>You can add or edit information about the participant (or potential
+                        participant).</p>
+
+                    <form action="#">
+
+                        <div class="bordered-box">
+                            <a href="#" class="button button-red"><em class="fa fa-trash"></em> Delete this appointment</a>
+                        </div>
+                        <div class="big-box">
+                            <h3>Appointment details</h3>
+
+                            <div class="bordered-box">
+                                <label for="study_phase"><a href="#">Study phase*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>To what study phase is this appointment related.</em></label>
+                                <select id="study_phase" name="study_phase">
+                                    <option disabled selected>Select study phase</option>
+                                    <option>Initial interview</option>
+                                    <option>First pre-delivery visit</option>
+                                    <option>Second pre-delivery visit</option>
+                                    <option>Post dispatch follow-up</option>
+                                    <option disabled>----</option>
+                                    <option>NO PHASE: general appointment</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="created_on"><a href="#">Created on: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When the appointment was created.</em></label>
+                                <input type="datetime-local" id="created_on" name="created_on"
+                                       value="2018-06-12T19:30" readonly class="disabled">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="author"><a href="#">Author: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When the appointment was created.</em></label>
+                                <input type="text" id="author" name="author"
+                                       value="&#x1F9CD; Peter Johnson" readonly class="disabled">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="booked_on"><a href="#">Booked date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>To which date the appointment is booked (if relevant).</em></label>
+                                <input type="datetime-local" id="booked_on" name="booked_on"
+                                    placeholder="Booked date">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="visit_on"><a href="#">Visit date: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When did actual appointment happened.</em></label>
+                                <input type="datetime-local" id="visit_on" name="visit_on"
+                                    placeholder="Visit date">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="location"><a href="#">Location of appointment: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Where is the appointment going to happen.</em></label>
+                                <select id="location" name="location">
+                                    <option disabled selected>Select location</option>
+                                    <option>Online or over the phone</option>
+                                    <option disabled>----</option>
+                                    <option>Liverpool Womens Trust</option>
+                                    <option>Broadgreen Hospital</option>
+                                    <option>Spire Hospital</option>
+                                    <option>Royal University Hospital</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="ecrf"><a href="#">eCRF stage: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>The stage of the eCRF (electronic case report form), if applies.</em></label>
+                                <select id="ecrf" name="ecrf">
+                                    <option disabled selected>Select the eCRF stage</option>
+                                    <option>required</option>
+                                    <option>passed</option>
+                                    <option>rejected</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="appointment_stage"><a href="#">Appointment stage: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>The stage of the appointment.</em></label>
+                                <select id="appointment_stage" name="appointment_stage">
+                                    <option disabled selected>Select the appointment stage</option>
+                                    <option>created</option>
+                                    <option>contacted</option>
+                                    <option>unreachable</option>
+                                    <option>want / need more time</option>
+                                    <option>declined</option>
+                                    <option>finished</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="big-box">
+                            <h3>Notes and actions log:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Some note subject:</strong> Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+
+                            <div class="bordered-box yellow-background">
+                                <h4 class="no-bottom-m"><em class="fa fa-bookmark"></em> CALL event from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p>Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <a href="#" class="button"><em class="fa fa-sticky-note"></em> Add a new note</a>
+                                <a href="#" class="button margin-left-10"><em class="fa fa-phone"></em> Add a new action log</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <h4>Add a new note</h4>
+                                <label for="event_type"><a href="#">Note subject: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Subject of the note (if relevant)</em></label>
+                                <input type="text" id="event_type"
+                                    name="note_subject" placeholder="Note subject">
+                                <div class="clear">&nbsp;</div>
+                                <label for="note_text"><a href="#">Note*:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Note description/content.</em></label>
+                                <textarea id="note_text"
+                                    name="note_text"
+                                    placeholder="Note"></textarea>
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add note">
+                            </div>
+
+                            <div class="bordered-box">
+                                <h4>Add a new action log</h4>
+                                <label for="note_subject"><a href="#">Event type: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Type of event (like call, email, action, follow-up).</em></label>
+                                <select id="note_subject" name="appointment_stage">
+                                    <option disabled selected>Select type of event</option>
+                                    <option>Call</option>
+                                    <option>E-mail</option>
+                                    <option>Follow-up</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="clear">&nbsp;</div>
+                                <label for="event_time"><a href="#">Date and time: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Date and time when the event took place.</em></label>
+                                <input type="datetime-local" id="event_time" name="event_time"
+                                    placeholder="Visit date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="event_text"><a href="#">Note related to event:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Note related to event:</em></label>
+                                <textarea id="event_text"
+                                    name="event_text"
+                                    placeholder="Note related to event"></textarea>
+
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add event log">
+                            </div>
+                        </div>
+
+
+                        <input type="submit" value="Save">
+                    </form>
+
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>

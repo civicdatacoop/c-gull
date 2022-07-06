@@ -1,5 +1,23 @@
 import datetime
 import random
+from random import randrange
+from datetime import timedelta
+
+
+def random_date() -> datetime.datetime:
+    """
+    This function will return a random datetime between two datetime
+    objects.
+    """
+    start = datetime.datetime.strptime('1/1/2020 9:30 AM',
+                                       '%m/%d/%Y %I:%M %p')
+    end = datetime.datetime.strptime('12/31/2022 06:30 PM',
+                                     '%m/%d/%Y %I:%M %p')
+    delta = end - start
+    int_delta = (delta.days * 24 * 60 * 60) + delta.seconds
+    random_second = randrange(int_delta)
+    return start + timedelta(seconds=random_second)
+
 
 def random_address() -> str:
     addresses = ['66 Victoria Road, DUMFRIES, DG50 2TU',
@@ -9,6 +27,7 @@ def random_address() -> str:
                  '56 Manor Road, KIRKCALDY, KY90 6NL',
                  '93 Alexander Road, SUTTON, SM98 9LH']
     return random.choice(addresses)
+
 
 def random_participants(count: int = 10) -> list[dict]:
     first_names = ['Olivia', 'Emma', 'Charlotte', 'Amelia', 'Ava', 'Sophia']
@@ -51,3 +70,55 @@ def random_participants(count: int = 10) -> list[dict]:
             }
         )
     return participant
+
+
+def random_person_appointments(count: int = 10) -> list[dict]:
+    study_phases = [
+        'Initial interview',
+        'First pre-delivery visit',
+        'Second pre-delivery visit',
+        'Post dispatch follow-up'
+    ]
+    professionals = [
+        'Joanna Mills',
+        'Peter Johnson',
+        'Kale Understone',
+        'Hanna Waters'
+    ]
+    locations = [
+        'Liverpool Womens Trust',
+        'Broadgreen Hospital',
+        'Spire Hospital',
+        'Royal University Hospital'
+    ]
+    appointment_stages = [
+        'created',
+        'contacted',
+        'unreachable',
+        'want / need more time'
+        'declined',
+        'finished'
+    ]
+    ecrf_states = ['required', 'passed', 'rejected', 'no']
+    apps = []
+    for pos in range(count):
+        apps.append({
+            'position': pos + 1,
+            'study_phase': random.choice(study_phases),
+            'created_on': random_date().strftime("%d/%m/%y %H:%M"),
+            'author': random.choice(professionals),
+            'booked_on': random.choice(
+                ["N/A", random_date().strftime("%d/%m/%y %H:%M")]
+            ),
+            'visited_on': random.choice(
+                ["N/A", random_date().strftime("%d/%m/%y %H:%M")]
+            ),
+            'location': random.choice(locations),
+            'ecrf': random.choice(ecrf_states),
+            'appointment_stage': random.choice(appointment_stages),
+            'action_required': random.choice(['yes', 'no']),
+            'events_logged': random.choice(['yes', 'no']),
+            'notes': random.randint(0, 3),
+        })
+
+    return apps
