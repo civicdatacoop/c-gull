@@ -1,0 +1,57 @@
+
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <a href="edit_location.html" class="button"> <em class="fa fa-plus"></em> &nbsp; New location </a>
+            </form>
+            <div class="toolbar">
+                <a href="edit_location.html" class="button float-right"> <em class="fa fa-calendar"></em> &nbsp; Study Phases </a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+
+        <article>
+            <table class="main-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a href="#">Location name <em class="fa fa-caret-down"></em> </a></th>
+                        <th><a href="#">Address <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Comment <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Created on <em class="fa fa-caret-up"></em></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for location in r_locations %}
+                    <tr>
+                        <td>{{ location['position'] }}</td>
+                        <td><a href="edit_location.html" class="cell">{{ location['location_name'] }}</a></td>
+                        <td><a href="edit_location.html" class="cell">{{ location['address'] }}</a></td>
+                        <td><a href="edit_location.html" class="cell">{{ location['comment'] }}</a></td>
+                        <td><a href="edit_location.html" class="cell">{{ location['created_on'] }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="legend">
+                Total: 12 entries
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li><a href="#" class="p-first"><em class="fa fa-chevron-left"></em></a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li class="low-res-hide"><a href="#">28</a></li>
+                    <li><a href="#">29</a></li>
+                    <li><a href="#" class="selected">30</a></li>
+                    <li><a href="#">31</a></li>
+                    <li class="low-res-hide"><a href="#">32</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li><a href="#">60</a></li>
+                    <li><a href="#" class="p-last"><em class="fa fa-chevron-right"></em></a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </article>

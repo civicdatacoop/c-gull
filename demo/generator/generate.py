@@ -6,14 +6,14 @@ from jinja2 import Environment, FileSystemLoader
 from dataclasses import dataclass
 
 from rand_parts import random_participants, random_person_appointments, \
-    random_study_phases
+    random_study_phases, random_locations
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
 # Path to RESOURCES folder (relative to where you run the script)
 PATH_TO_RESOURCES = Path('../generator/RESOURCES/')
 # Path to output folder (relative to where you run the script)
-PATH_TO_OUTPUT = Path('../../docs/')
+PATH_TO_OUTPUT = Path('../docs/')
 # Root URL
 URL_ROOT = "https://civicdatacooperative.com/"
 
@@ -57,7 +57,8 @@ class Page(object):
                 link_to_homepage=link_to_homepage,
                 r_participants=random_participants(10),
                 r_person_appointments=random_person_appointments(10),
-                r_study_phases=random_study_phases(10)
+                r_study_phases=random_study_phases(10),
+                r_locations=random_locations(10)
             )
             return html_str
 
@@ -152,6 +153,33 @@ pages = [
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="New study phase"
+         ),
+    Page(title="Locations",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="locations",
+         content_file='page_locations.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Site Locations"
+         ),
+    Page(title="Edit location",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="edit_location",
+         content_file='page_edit_location.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Site Location"
+         ),
+    Page(title="Edit person's eligibility",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="person_eligibility",
+         content_file='page_person_eligibility.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Person's eligibility"
          ),
 ]
 

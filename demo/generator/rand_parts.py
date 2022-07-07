@@ -11,6 +11,13 @@ study_phases = [
         'Post dispatch follow-up'
     ]
 
+locations = [
+    'Liverpool Womens Trust',
+    'Broadgreen Hospital',
+    'Spire Hospital',
+    'Royal University Hospital'
+]
+
 
 def random_date() -> datetime.datetime:
     """
@@ -50,7 +57,7 @@ def random_participants(count: int = 10) -> list[dict]:
 
     participant = []
     for pos in range(count):
-        created = datetime.datetime.now().strftime("%d/%m/%y %H:%M")
+        created = random_date().strftime("%Y/%m/%d %H:%M")
         phone = "(0)" + str(random.randint(1000000000, 9999999999))
         s_f_name = random.choice(first_names)
         s_l_name = random.choice(last_names)
@@ -87,12 +94,6 @@ def random_person_appointments(count: int = 10) -> list[dict]:
         'Kale Understone',
         'Hanna Waters'
     ]
-    locations = [
-        'Liverpool Womens Trust',
-        'Broadgreen Hospital',
-        'Spire Hospital',
-        'Royal University Hospital'
-    ]
     appointment_stages = [
         'created',
         'contacted',
@@ -107,13 +108,13 @@ def random_person_appointments(count: int = 10) -> list[dict]:
         apps.append({
             'position': pos + 1,
             'study_phase': random.choice(study_phases),
-            'created_on': random_date().strftime("%d/%m/%y %H:%M"),
+            'created_on': random_date().strftime("%Y/%m/%d %H:%M"),
             'author': random.choice(professionals),
             'booked_on': random.choice(
-                ["N/A", random_date().strftime("%d/%m/%y %H:%M")]
+                ["N/A", random_date().strftime("%Y/%m/%d %H:%M")]
             ),
             'visited_on': random.choice(
-                ["N/A", random_date().strftime("%d/%m/%y %H:%M")]
+                ["N/A", random_date().strftime("%Y/%m/%d %H:%M")]
             ),
             'location': random.choice(locations),
             'ecrf': random.choice(ecrf_states),
@@ -143,3 +144,20 @@ def random_study_phases(count: int = 10) -> list[dict]:
             'number_of_participants': random.randint(0, 30000),
         })
     return phases
+
+
+def random_locations(count: int = 10) -> list[dict]:
+    locations_pool = []
+    comments = ['From July Ward C, till then Ward A',
+                'Closed on Sunday and Monday',
+                'No longer than 10 minutes appointments']
+    for pos in range(count):
+        locations_pool.append({
+            'position': pos + 1,
+            'location_name': random.choice(locations),
+            'address': random_address(),
+            'comment': random.choice(comments),
+            'created_on': random_date().strftime("%Y/%m/%d %H:%M")
+
+        })
+    return locations_pool

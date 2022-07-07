@@ -1,0 +1,40 @@
+<aside>
+            {% include "tag_person_top.html" %}
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's eligibility</h2>
+                    <p>Is this person eligible to participate in the study?</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Person's eligibility</h3>
+                            <div class="bordered-box">
+                                <label for="eligibility"><a href="#">Eligibility*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Is this person eligible to participate in the study?</em></label>
+                                <select id="eligibility" name="eligibility">
+                                    <option>To be determined</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div class="bordered-box">
+                                <label for="eligibility_comments"><a href="#">Comments related to
+                                        eligibility: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Comments related to decision about eligibility.</em></label>
+                                <textarea id="eligibility_comments" name="eligibility_comments"
+                                    placeholder="Comments"></textarea>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>

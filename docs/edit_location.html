@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit location</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">Site Location</div>
+        <a id="icon-person" class="fa fa-user" href="#"></a>
+        <div id="person-info">
+
+            <strong><a href="#">Joana F. Mills</a></strong>
+            <div class="clear"></div>
+            <a href="#">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a  href="study_phases.html"><em class="fa fa-calendar"></em> Study phases</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <form action="#" method="get" id="action-box">
+                <a href="locations.html" class="button float-right"><em class="fa fa-map-marker"></em> &nbsp; Location</a>
+            </form>
+
+            <div class="toolbar">
+                <a href="study_phases.html" class="button float-right"><em class="fa fa-calendar"></em> &nbsp; Study Phases</a>
+
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Edit location</h2>
+                    <p>Here you can add a site or location into the system.</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Site location definition</h3>
+
+                            <div class="bordered-box">
+                                <label for="phase_name"><a href="#">Location name:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose appropriate name for the location or site.</em></label>
+                                <input type="text" id="phase_name" name="phase_name"
+                                    placeholder="Location or site name">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="location_address"><a href="#">Address:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Full address of the location.</em></label>
+                                <input type="text" id="location_address" name="location_address"
+                                    placeholder="Full address">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="location_comment"><a href="#">Comment: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Comment or important information related to location.</em></label>
+                                <textarea id="location_comment"
+                                    name="location_comment"
+                                    placeholder="Comment"></textarea>
+                            </div>
+
+                        </div>
+
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>
