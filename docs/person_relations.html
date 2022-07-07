@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Withdraw participant</title>
+    <title>Edit person's relations</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
@@ -14,7 +14,7 @@
 	
     <header>
         <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
-        <div id="page-nav-top">Withdraw participant</div>
+        <div id="page-nav-top">Person's relations</div>
         <a id="icon-person" class="fa fa-user" href="#"></a>
         <div id="person-info">
 
@@ -58,38 +58,46 @@
         <article>
             <section>
                 <div class="content">
-                    <h2 class="no-top-m">Withdraw study participant</h2>
-                    <p>Here you can withdraw the participant (or potential participant from the study). Also, you can request to delete all data related to a person (based on the GDPR request).</p>
+                    <h2 class="no-top-m">Person's relations</h2>
+                    <p>Here you can add or edit information about the participant (or potential participant).</p>
                     <form action="#">
                         <div class="big-box">
-                            <h3>Withdraw of (potential) participant from study</h3>
+                            <h3>Relations:</h3>
                             <div class="bordered-box">
-                                <label for="study_id"><a href="#">Study participant ID:* <em
-                                            class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>Represents a unique ID assigned to the
-                                        study participant.</em></label>
-                                <input type="text" id="study_id" name="study_id" value="C3WA3QC1"
-                                    readonly class="disabled">
+                                <p class="no-top-m">This person is in relation <strong>MOTHER</strong> to <a href="#" class="strong">John Newman (study id: P9K4NS9A)</a></p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
                             </div>
+
                             <div class="bordered-box">
-                                <label for="study_id"><a href="#">How to remove:* <em
+                                <a href="#" class="button"><em class="fa fa-plus"></em> Add a new relation</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <h4>Add a new relation to person</h4>
+                                <p class="no-top-m">Add a relation to this person.</p>
+                                <label for="relation"><a href="#">Relation to another person*: <em
                                             class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>Choose whether to delete all data related to the person (GDPR-based request) or just opt-out person from the study (from now forwards).</em></label>
-                                <select id="study_phase" name="study_phase">
-                                    <option disabled selected>Select removing option</option>
-                                    <option>Delete all data related to participant (GDPR)</option>
-                                    <option>Keep collected data, but opt the person out</option>
+                                        class="info-box"><br>Select in what relation is this person to another:</em></label>
+                                <select id="relation" name="relation">
+                                    <option disabled selected>Select the relation</option>
+                                    <option>mother</option>
+                                    <option>father</option>
                                 </select>
-                            </div>
-                            <div class="bordered-box">
-                                <label for="reason_opt_out"><a href="#">Reason*: <em class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>Why does the person want to opt-out?</em></label>
-                                <textarea id="reason_opt_out" name="reason_opt_out"
-                                    placeholder="Why does the person want to opt-out?"></textarea>
+                                <div class="clear">&nbsp;</div>
+                                <label for="relation_study_id"><a href="#">Another person Study ID*:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Provide the Study ID of another participant that is in the defined relation to this person.</em></label>
+                                <input type="text" id="relation_study_id" name="relation_study_id"
+                                    placeholder="Study ID">
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add relation">
                             </div>
                         </div>
 
-                        <input type="submit" value="Withdraw">
+                        <input type="submit" value="Save">
                     </form>
                 </div>
             </section>

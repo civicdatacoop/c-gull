@@ -1,0 +1,55 @@
+<aside>
+            {% include "tag_person_top.html" %}
+            <div class="toolbar">
+                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's relations</h2>
+                    <p>Here you can add or edit information about the participant (or potential participant).</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Relations:</h3>
+                            <div class="bordered-box">
+                                <p class="no-top-m">This person is in relation <strong>MOTHER</strong> to <a href="#" class="strong">John Newman (study id: P9K4NS9A)</a></p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <a href="#" class="button"><em class="fa fa-plus"></em> Add a new relation</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <h4>Add a new relation to person</h4>
+                                <p class="no-top-m">Add a relation to this person.</p>
+                                <label for="relation"><a href="#">Relation to another person*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Select in what relation is this person to another:</em></label>
+                                <select id="relation" name="relation">
+                                    <option disabled selected>Select the relation</option>
+                                    <option>mother</option>
+                                    <option>father</option>
+                                </select>
+                                <div class="clear">&nbsp;</div>
+                                <label for="relation_study_id"><a href="#">Another person Study ID*:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Provide the Study ID of another participant that is in the defined relation to this person.</em></label>
+                                <input type="text" id="relation_study_id" name="relation_study_id"
+                                    placeholder="Study ID">
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add relation">
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>

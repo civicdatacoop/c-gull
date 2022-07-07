@@ -181,6 +181,15 @@ pages = [
          last_mod=datetime.datetime(2022, 1, 1),
          name="Person's eligibility"
          ),
+    Page(title="Edit person's relations",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="person_relations",
+         content_file='page_relations.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Person's relations"
+         ),
 ]
 
 # Remove all existing resources

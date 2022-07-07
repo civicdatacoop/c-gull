@@ -184,6 +184,10 @@ article {
     float: right;
 }
 
+.strong {
+    font-weight: bold;
+}
+
 .icon-plus:before {
     content: '+';
 }
