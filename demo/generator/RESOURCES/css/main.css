@@ -222,6 +222,7 @@ aside #action-box {
     margin-left: 3pt;
     color: var(--primary);
     background: var(--font-href);
+    margin-right: 20pt;
 }
 
 aside .button {

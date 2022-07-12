@@ -1,0 +1,86 @@
+
+        <aside>
+            <form action="#" method="get" id="action-box" class="action-inputs">
+                <input type="text" placeholder="Search for user...">
+                <input type="submit" value="&#xf002;" class="fa">
+
+                <select id="action_location" name="action_location">
+                    <option selected disabled>Filter by privilege level</option>
+                    <option>All levels</option>
+                    <option>Root</option>
+                    <option>Study administrator</option>
+                    <option>Research assistant</option>
+                    <option>Secretary</option>
+                </select>
+                <input type="submit" value="&#xf0b0;" class="fa">
+            </form>
+            <div class="toolbar">
+                <a href="add_user.html" class="button float-right"> <em class="fa fa-plus"></em> New user </a>
+            </div></div>
+            <div class="clear"></div>
+        </aside>
+
+        <article>
+            <table class="main-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a href="#">Last name <em class="fa fa-caret-down"></em> </a></th>
+                        <th><a href="#">First name <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Middle name <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Privilege <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Employer <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Job title <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Employee ID <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">E-mail <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Phone <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Password expire in <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Created on <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Created by <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Comment <em class="fa fa-caret-up"></em></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usr in r_users %}
+                    <tr>
+                        <td>{{ usr['position'] }}</td>
+                        <td><a href="add_user.html" class="cell">{{ usr['last_name'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['first_name'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['middle_name'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['privilege'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['employer'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['job_title'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['employee_id'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['email'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['phone'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['password_expire'] }} days</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['created'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['created_by'] }}</a></td>
+                        <td><a href="add_user.html" class="cell">{{ usr['comment'] }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="legend">
+                Total: 5598 entries
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li><a href="#" class="p-first"><em class="fa fa-chevron-left"></em></a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li class="low-res-hide"><a href="#">28</a></li>
+                    <li><a href="#">29</a></li>
+                    <li><a href="#" class="selected">30</a></li>
+                    <li><a href="#">31</a></li>
+                    <li class="low-res-hide"><a href="#">32</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li><a href="#">60</a></li>
+                    <li><a href="#" class="p-last"><em class="fa fa-chevron-right"></em></a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </article>

@@ -18,6 +18,13 @@ locations = [
     'Section C, Royal University Hospital'
 ]
 
+professionals = [
+        'Joanna Mills',
+        'Peter Johnson',
+        'Kale Understone',
+        'Hanna Waters'
+    ]
+
 
 def random_date() -> datetime.datetime:
     """
@@ -44,7 +51,8 @@ def random_address() -> str:
     return random.choice(addresses)
 
 
-def random_participants(count: int = 10) -> list[dict]:
+def random_participants(count: int = 10,
+                        email_provider: str = "gmail.com") -> list[dict]:
     first_names = ['Olivia', 'Emma', 'Charlotte', 'Amelia', 'Ava', 'Sophia']
     middle_names = ['Isabella', 'Mia', 'Evelyn', 'Harper', 'Flora', 'Raya']
     last_names = ['Smith', 'Jones', 'Taylor', 'Brown', 'Williams', 'Davies']
@@ -61,7 +69,7 @@ def random_participants(count: int = 10) -> list[dict]:
         phone = "(0)" + str(random.randint(1000000000, 9999999999))
         s_f_name = random.choice(first_names)
         s_l_name = random.choice(last_names)
-        email = f"{s_f_name}.{s_f_name}@out.com".lower()
+        email = f"{s_f_name}.{s_f_name}@{email_provider}".lower()
         dob = f"{random.randint(1970, 1999)}/" \
               f"{random.randint(1, 12)}/" \
               f"{random.randint(13, 28)}"
@@ -88,12 +96,7 @@ def random_participants(count: int = 10) -> list[dict]:
 
 
 def random_person_appointments(count: int = 10) -> list[dict]:
-    professionals = [
-        'Joanna Mills',
-        'Peter Johnson',
-        'Kale Understone',
-        'Hanna Waters'
-    ]
+
     appointment_stages = [
         'created',
         'contacted',
@@ -180,3 +183,25 @@ def random_itinerary(count: int = 10) -> list[dict]:
             'language': participant['language']
         })
     return itinerary
+
+
+def random_users(count: int = 10) -> list[dict]:
+    privileges = ['root', 'study administrator', 'research assistant',
+                  'secretary']
+    employers = ['Womens Hospital Trust', 'NHS', 'Liverpool Hospital']
+    job_titles = ['Leading Nurse', 'Nurse', 'University researcher', 'Midwife']
+    people = random_participants(count, 'nhs.co.uk')
+    users = []
+    for pos, person in enumerate(people):
+        users.append({
+            **person,
+            'privilege': random.choice(privileges),
+            'employer': random.choice(employers),
+            'job_title': random.choice(job_titles),
+            'employee_id': random.randint(10_000_000, 99_999_999),
+            'password_expire': random.randint(5, 120),
+            'created_by': random.choice(professionals),
+            'comment': random.choice(['N/A', 'Some comment'])
+        })
+
+    return users

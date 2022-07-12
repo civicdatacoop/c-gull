@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New user</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="index.html"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">New user</div>
+        <a id="icon-person" class="fa fa-user" href="add_user.html"></a>
+        <div id="person-info">
+
+            <strong><a href="add_user.html">Joana F. Mills</a></strong>
+            <div class="clear"></div>
+            <a href="add_user.html">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a  href="study_phases.html"><em class="fa fa-list-ol"></em> Phases</a>
+                </li>
+                <li>
+                    <a  href="itinerary.html"><em class="fa fa-calendar"></em> Itinerary</a>
+                </li>
+                <li>
+                    <a  href="users.html"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside><form action="#" method="get" id="action-box">
+    <a href="add_user.html" class="button"><em class="fa fa-user"></em> &nbsp; User's detail</a>
+</form>
+<div class="toolbar">
+    <a href="users.html" class="button float-right"><em class="fa fa-users"></em> &nbsp; List all users</a>
+</div>
+<div class="clear"></div></aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">User's details</h2>
+                    <p>You can edit the user's information here. This page is related to a system user, not a participant.</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>User info</h3>
+                            <div class="bordered-box">
+                                <label for="first_name"><a href="#">First name <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>User's first name.</em></label>
+                                <input type="text" id="first_name" name="first_name"
+                                    placeholder="First name">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="middle_name"><a href="#">Middle name <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>User's middle
+                                        name.</em></label>
+                                <input type="text" id="middle_name" name="middle_name"
+                                    placeholder="Middle name">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="last_name"><a href="#">Last name* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>User's last name.</em></label>
+                                <input type="text" id="last_name" name="last_name"
+                                    placeholder="Last name">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="privilege_level"><a href="#">Privilege level* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>User's privilege level.</em></label>
+                                <select id="privilege_level" name="privilege_level">
+                                    <option>Secretary</option>
+                                    <option>Research assistant</option>
+                                    <option>Study administrator</option>
+                                    <option>Root</option>
+                                </select>
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="employer"><a href="#">Employer* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Who is user's employer?</em></label>
+                                <input type="text" id="employer" name="employer"
+                                    placeholder="Employer">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="job_title"><a href="#">Job title* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Job title of user?</em></label>
+                                <input type="text" id="job_title" name="job_title"
+                                    placeholder="Job title">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="employee_id"><a href="#">Employee ID <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>User's employee ID (if applicable).</em></label>
+                                <input type="text" id="employee_id" name="employee_id"
+                                    placeholder="Employee ID">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="email"><a href="#">E-mail*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>E-mail address contact to the
+                                        user.</em></label>
+                                <input type="email" id="email" name="email" placeholder="E-mail">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="telephone"><a href="#">Telephone number*: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Telephone contact number (like GSM,
+                                        landline).</em></label>
+                                <input type="text" id="telephone" name="telephone"
+                                    placeholder="Telephone number">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="password_1"><a href="#">New password: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Write the new password for the user.</em></label>
+                                <input type="password" id="password_1" name="password_1"
+                                    placeholder="Password">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="password_2"><a href="#">New password again: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Write the new password for the user again.</em></label>
+                                <input type="password" id="password_2" name="password_2"
+                                    placeholder="Password again">
+                            </div>
+                            <div class="bordered-box">
+                                <label for="comments"><a href="#">Comments related to
+                                        user: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Are there any comments related to this user?</em></label>
+                                <textarea id="comments" name="comments"
+                                    placeholder="Comments"></textarea>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>
