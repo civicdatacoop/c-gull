@@ -192,21 +192,17 @@ article {
     content: '+';
 }
 
-.icon-person:before {
-    content: '웃';
-}
-
-aside #action-box .button {
-    display: inline-block;
-    float: left;
-}
-
 aside #action-box {
     display: block;
     float: left;
 }
 
-aside #action-box input {
+#action-box .button {
+    display: inline-block;
+    float: left;
+}
+
+.action-inputs input, .action-inputs select {
     border: 1pt solid var(--font-main);
     height: 21pt;
     margin: 0;
@@ -215,12 +211,13 @@ aside #action-box input {
     padding: 0;
 }
 
-aside #action-box input[type=text] {
+.action-inputs input[type=text], .action-inputs select {
     width: 150pt;
+    height: 21pt;
     padding-left: 5pt;
 }
 
-aside #action-box input[type=submit] {
+.action-inputs input[type=submit] {
     width: 21pt;
     margin-left: 3pt;
     color: var(--primary);
@@ -376,6 +373,14 @@ section {
     margin-top: 0;
 }
 
+.importance-level-2 {
+    background: var(--yellow);
+}
+
+.importance-level-3 {
+    background: var(--note-red);
+}
+
 label {
     width: 100%;
     display: block;
@@ -468,7 +473,7 @@ input.disabled {
         width: 20pt;
     }
 
-    #action-box .button {
+    .action-inputs .button {
         margin-bottom: 10pt;
     }
 }

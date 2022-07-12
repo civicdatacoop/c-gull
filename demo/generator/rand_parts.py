@@ -12,10 +12,10 @@ study_phases = [
     ]
 
 locations = [
-    'Liverpool Womens Trust',
-    'Broadgreen Hospital',
-    'Spire Hospital',
-    'Royal University Hospital'
+    'Room 423, Liverpool Womens Trust',
+    'Room 286, Broadgreen Hospital',
+    'Reception, Spire Hospital',
+    'Section C, Royal University Hospital'
 ]
 
 
@@ -161,3 +161,22 @@ def random_locations(count: int = 10) -> list[dict]:
 
         })
     return locations_pool
+
+
+def random_itinerary(count: int = 10) -> list[dict]:
+    participants = random_participants(count)
+    itinerary: list = []
+    for position, participant in enumerate(participants):
+        itinerary.append({
+            'position': position + 1,
+            'appointment': random_date().strftime("%Y/%m/%d %H:%M"),
+            'last_name': participant['last_name'],
+            'first_name': participant['first_name'],
+            'study_number': participant['study_number'],
+            'location': random.choice(locations),
+            'phone': participant['phone'],
+            'email': participant['email'],
+            'address': participant['address'],
+            'language': participant['language']
+        })
+    return itinerary

@@ -1,65 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Edit person's relations</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-</head>
-
-<body>
-	
-    <header>
-        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
-        <div id="page-nav-top">Person's relations</div>
-        <a id="icon-person" class="fa fa-user" href="#"></a>
-        <div id="person-info">
-
-            <strong><a href="#">Joana F. Mills</a></strong>
-            <div class="clear"></div>
-            <a href="#">Leading Research Nurse</a>
-
-        </div>
-
-
-    </header>
-    <div class="clear"></div>
-    <section>
-        
-        <nav>
-            <ul>
-                <li>
-                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
-                </li>
-                <li>
-                    <a  href="study_phases.html"><em class="fa fa-calendar"></em> Study phases</a>
-                </li>
-                <li>
-                    <a href="#"><em class="fa fa-user"></em> Users</a>
-                </li>
-            </ul>
-        </nav>
-        <aside>
-            <form action="#" method="get" id="action-box">
-    <a href="edit_participant.html" class="button"><em class="fa fa-user"></em> &nbsp; Details</a>
-    <a href="person_appointment.html" class="button"><em class="fa fa-calendar"></em> &nbsp; Appointments</a>
-    <a href="notes.html" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Notes</a>
-    <a href="person_eligibility.html" class="button"><em class="fa fa-check-square"></em> &nbsp; Eligibility</a>
-    <a href="person_relations.html" class="button"><em class="fa fa-connectdevelop"></em> &nbsp; Relations</a>
-</form>
-            <div class="toolbar">
-                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
-            </div>
-            <div class="clear"></div>
-        </aside>
+<aside>{% include "tag_person_top.html" %}</aside>
         <article>
             <section>
                 <div class="content">
                     <h2 class="no-top-m">Person's relations</h2>
-                    <p>Here you can add or edit information about the participant (or potential participant).</p>
+                    <p>Here you can edit information about family relations (who is mother, father or carer) for participants.</p>
                     <form action="#">
                         <div class="big-box">
                             <h3>Relations:</h3>
@@ -85,6 +29,7 @@
                                     <option disabled selected>Select the relation</option>
                                     <option>mother</option>
                                     <option>father</option>
+                                    <option>carer</option>
                                 </select>
                                 <div class="clear">&nbsp;</div>
                                 <label for="relation_study_id"><a href="#">Another person Study ID*:
@@ -103,8 +48,3 @@
             </section>
             <div class="clear"></div>
         </article>
-    </section>
-    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
-</body>
-
-</html>

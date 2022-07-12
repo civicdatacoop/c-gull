@@ -1,0 +1,80 @@
+
+        <aside>
+            <form action="#" method="get" id="action-box" class="action-inputs">
+                <select id="action_due" name="action_due">
+                    <option>Ap. due today</option>
+                    <option>Ap. due in 3 days</option>
+                    <option>Ap. due in 7 days</option>
+                    <option>Ap. due in 14 days</option>
+                </select>
+                <input type="submit" value="&#xf0b0;" class="fa">
+            </form>
+            <div class="toolbar action-inputs float-right">
+                <select id="action_location" name="action_location">
+                    <option>All locations</option>
+                    {% for loc in r_locations %}
+                    <option>{{ loc['location_name'] }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="&#xf0b0;" class="fa">
+            </div>
+            <div class="clear"></div>
+        </aside>
+
+        <article>
+            <table class="main-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a href="#">Appointment due <em class="fa fa-caret-down"></em> </a></th>
+                        <th><a href="#">Last name <em class="fa fa-caret-down"></em> </a></th>
+                        <th><a href="#">First name <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Location <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Language <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Phone <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">E-Mail <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Person's address <em class="fa fa-caret-up"></em></a></th>
+                        <th><a href="#">Study number <em class="fa fa-caret-up"></em></a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for itinerary in r_itinerary %}
+                    <tr>
+                        <td>{{ itinerary['position'] }}</td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['appointment'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['last_name'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['first_name'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['location'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['language'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['phone'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['email'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['address'] }}</a></td>
+                        <td><a href="person_appointment.html" class="cell">{{ itinerary['study_number'] }}</a></td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="legend">
+                Total: 5598 entries
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    <li><a href="#" class="p-first"><em class="fa fa-chevron-left"></em></a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li class="low-res-hide"><a href="#">28</a></li>
+                    <li><a href="#">29</a></li>
+                    <li><a href="#" class="selected">30</a></li>
+                    <li><a href="#">31</a></li>
+                    <li class="low-res-hide"><a href="#">32</a></li>
+                    <li class="three-dots"><span>⋯</span></li>
+                    <li><a href="#">60</a></li>
+                    <li><a href="#" class="p-last"><em class="fa fa-chevron-right"></em></a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </article>

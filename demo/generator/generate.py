@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 from dataclasses import dataclass
 
 from rand_parts import random_participants, random_person_appointments, \
-    random_study_phases, random_locations
+    random_study_phases, random_locations, random_itinerary
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
@@ -58,7 +58,8 @@ class Page(object):
                 r_participants=random_participants(10),
                 r_person_appointments=random_person_appointments(10),
                 r_study_phases=random_study_phases(10),
-                r_locations=random_locations(10)
+                r_locations=random_locations(10),
+                r_itinerary=random_itinerary(10)
             )
             return html_str
 
@@ -86,7 +87,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="index",
-         content_file='page_participants.html',
+         content_file='page_person_list.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Imported patients"
@@ -95,7 +96,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="edit_participant",
-         content_file='page_edit_participant.html',
+         content_file='page_person_detail.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Edit participant"
@@ -104,7 +105,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="notes",
-         content_file='page_notes.html',
+         content_file='page_person_notes.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Edit notes"
@@ -113,7 +114,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="person_appointment",
-         content_file='page_person_appointment.html',
+         content_file='page_person_appointment_list.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Person's appointments"
@@ -122,7 +123,7 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="edit_person_appointment",
-         content_file='page_edit_person_appointment.html',
+         content_file='page_person_appointment_detail.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Appointment editor"
@@ -185,10 +186,19 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="person_relations",
-         content_file='page_relations.html',
+         content_file='page_person_relations.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Person's relations"
+         ),
+    Page(title="Study itinerary",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="itinerary",
+         content_file='page_itinerary_list.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Study itinerary"
          ),
 ]
 

@@ -1,10 +1,61 @@
-<aside>
-            {% include "tag_person_top.html" %}
-            <div class="toolbar">
-                <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Person's appointment editor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+    <header>
+        <div id="logo"><a href="#"><strong>C</strong>-GULL</a></div>
+        <div id="page-nav-top">Appointment editor</div>
+        <a id="icon-person" class="fa fa-user" href="#"></a>
+        <div id="person-info">
+
+            <strong><a href="#">Joana F. Mills</a></strong>
             <div class="clear"></div>
-        </aside>
+            <a href="#">Leading Research Nurse</a>
+
+        </div>
+
+
+    </header>
+    <div class="clear"></div>
+    <section>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a  href="index.html"><em class="fa fa-users"></em> People</a>
+                </li>
+                <li>
+                    <a  href="study_phases.html"><em class="fa fa-list-ol"></em> Phases</a>
+                </li>
+                <li>
+                    <a  href="itinerary.html"><em class="fa fa-calendar"></em> Itinerary</a>
+                </li>
+                <li>
+                    <a href="#"><em class="fa fa-user"></em> Users</a>
+                </li>
+            </ul>
+        </nav>
+        <aside><form action="#" method="get" id="action-box">
+    <a href="edit_participant.html" class="button"><em class="fa fa-user"></em> &nbsp; Details</a>
+    <a href="person_appointment.html" class="button"><em class="fa fa-calendar"></em> &nbsp; Appointments</a>
+    <a href="notes.html" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Notes</a>
+    <a href="person_eligibility.html" class="button"><em class="fa fa-check-square"></em> &nbsp; Eligibility</a>
+    <a href="person_relations.html" class="button"><em class="fa fa-connectdevelop"></em> &nbsp; Relations</a>
+</form>
+<div class="toolbar">
+    <a href="#" class="button button-red float-right"><em class="fa fa-external-link"></em> RedCAP</a>
+</div>
+<div class="clear"></div></aside>
         <article>
             <section>
                 <div class="content">
@@ -75,10 +126,27 @@
                                     <option disabled selected>Select location</option>
                                     <option>Online or over the phone</option>
                                     <option disabled>----</option>
-                                    <option>Liverpool Womens Trust</option>
-                                    <option>Broadgreen Hospital</option>
-                                    <option>Spire Hospital</option>
-                                    <option>Royal University Hospital</option>
+                                    
+                                    <option>Room 423, Liverpool Womens Trust</option>
+                                    
+                                    <option>Reception, Spire Hospital</option>
+                                    
+                                    <option>Room 423, Liverpool Womens Trust</option>
+                                    
+                                    <option>Room 286, Broadgreen Hospital</option>
+                                    
+                                    <option>Reception, Spire Hospital</option>
+                                    
+                                    <option>Reception, Spire Hospital</option>
+                                    
+                                    <option>Reception, Spire Hospital</option>
+                                    
+                                    <option>Room 423, Liverpool Womens Trust</option>
+                                    
+                                    <option>Section C, Royal University Hospital</option>
+                                    
+                                    <option>Section C, Royal University Hospital</option>
+                                    
                                 </select>
                             </div>
 
@@ -124,7 +192,7 @@
 
 
                             <div class="bordered-box yellow-background">
-                                <h4 class="no-bottom-m"><em class="fa fa-bookmark"></em> CALL event from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                <h4 class="no-bottom-m"><em class="fa fa-calendar-o"></em> CALL event from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
                                 </h4>
                                 <p>Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
                                 <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
@@ -134,8 +202,8 @@
                             </div>
 
                             <div class="bordered-box">
-                                <a href="#" class="button"><em class="fa fa-sticky-note"></em> Add a new note</a>
-                                <a href="#" class="button margin-left-10"><em class="fa fa-phone"></em> Add a new action log</a>
+                                <a href="#" class="button"><em class="fa fa-sticky-note"></em> &nbsp; Add a new note</a>
+                                <a href="#" class="button margin-left-10"><em class="fa fa-calendar-plus-o"></em> &nbsp; Add a new action log</a>
                             </div>
 
                             <div class="bordered-box">
@@ -145,6 +213,15 @@
                                         class="info-box"><br>Subject of the note (if relevant)</em></label>
                                 <input type="text" id="event_type"
                                     name="note_subject" placeholder="Note subject">
+                                <div class="clear">&nbsp;</div>
+                                <label for="note_importance"><a href="#">Note importance: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose how important is this note.</em></label>
+                                <select id="note_importance" name="note_importance">
+                                    <option>1: Normal (neutral level)</option>
+                                    <option>2: Important (higher level)</option>
+                                    <option>3: Very Important (critical level)</option>
+                                </select>
                                 <div class="clear">&nbsp;</div>
                                 <label for="note_text"><a href="#">Note*:
                                         <em class="fa fa-info-circle"></em></a> <em
@@ -167,6 +244,15 @@
                                     <option>E-mail</option>
                                     <option>Follow-up</option>
                                     <option>Other</option>
+                                </select>
+                                <div class="clear">&nbsp;</div>
+                                <label for="event_importance"><a href="#">Event importance: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose how important is this event note.</em></label>
+                                <select id="event_importance" name="event_importance">
+                                    <option>1: Normal (neutral level)</option>
+                                    <option>2: Important (higher level)</option>
+                                    <option>3: Very Important (critical level)</option>
                                 </select>
                                 <div class="clear">&nbsp;</div>
                                 <label for="event_time"><a href="#">Date and time: <em
@@ -195,3 +281,8 @@
             </section>
             <div class="clear"></div>
         </article>
+    </section>
+    <footer>&copy; 2022 LCR Civic Data Cooperative</footer>
+</body>
+
+</html>

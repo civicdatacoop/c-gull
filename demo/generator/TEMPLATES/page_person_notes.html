@@ -1,0 +1,88 @@
+<aside>{% include "tag_person_top.html" %}</aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Person's notes</h2>
+                    <p>Here you can view notes related to the participant (or potential participant).</p>
+                    <form action="#">
+                        <div class="big-box">
+                            <h3>Notes:</h3>
+                            <div class="bordered-box importance-level-1">
+                                <h4 class="no-bottom-m">Note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Some note subject:</strong> Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+                            <div class="bordered-box importance-level-2">
+                                <h4 class="no-bottom-m"><em class="fa fa-flag"></em> Note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Something important happened:</strong> Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+                            <div class="bordered-box importance-level-3">
+                                <h4 class="no-bottom-m"><em class="fa fa-exclamation-circle"></em> Note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Something critical happened:</strong> Sed efficitur est vitae felis interdum, eget vulputate augue maximus. Vestibulum ut eros pretium nibh imperdiet auctor. Integer porta hendrerit sem, ac ornare arcu elementum eget. Fusce nec porttitor lectus. Nam mattis odio et leo tempus, id rutrum dui convallis. In porta nibh magna, vitae pulvinar lorem accumsan vitae. Aliquam viverra, lectus eget fringilla pulvinar, sem tellus sollicitudin erat, sed faucibus nisl erat at justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse elit mauris, imperdiet eu quam vel, mattis ultrices tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut efficitur odio, in vehicula quam. Nunc vitae varius nibh. Suspendisse quis pellentesque lectus, ultrices fringilla elit.</p>
+                                <a href="#" class="button"><em class="fa fa-pencil"></em> Edit</a>
+                                <a href="#" class="button button-red margin-left-10"><em
+                                        class="fa fa-trash"></em>
+                                    Delete</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <a href="#" class="button"><em class="fa fa-sticky-note"></em> Add a new note</a>
+                            </div>
+
+                            <div class="bordered-box">
+                                <h4>Add a new note</h4>
+                                <p class="no-top-m">Add a note related to XXX.</p>
+                                <label for="note_subject"><a href="#">Note subject: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Subject of the note (if relevant)</em></label>
+                                <input type="text" id="note_subject"
+                                    name="note_subject" placeholder="Note subject">
+                                <div class="clear">&nbsp;</div>
+                                <label for="note_importance"><a href="#">Note importance: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose how important is this note.</em></label>
+                                <select id="note_importance" name="note_importance">
+                                    <option>1: Normal (neutral level)</option>
+                                    <option>2: Important (higher level)</option>
+                                    <option>3: Very Important (critical level)</option>
+                                </select>
+                                <div class="clear">&nbsp;</div>
+                                <label for="note_text"><a href="#">Note*:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Note description/content.</em></label>
+                                <textarea id="note_text"
+                                    name="note_text"
+                                    placeholder="Note"></textarea>
+                                <div class="clear">&nbsp;</div>
+                                <input type="button" value="Add note">
+                            </div>
+                        </div>
+
+                        <div class="big-box">
+                            <h3>Appointment notes:</h3>
+                            <div class="bordered-box">
+                                <h4 class="no-bottom-m">Appointment note from 2020/04/07 (15:23), created by <a href="#"><em class="fa fa-user"></em> Joana Mills</a>
+                                </h4>
+                                <p><strong>Alert:</strong> person hang up without reason.</p>
+                                <a href="#" class="button"><em class="fa fa-link"></em> Go to appointment detail</a>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
