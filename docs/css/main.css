@@ -30,9 +30,12 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--font-main);
     font-size: 12pt;
+}
+input, textarea, select, option {
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -91,7 +94,7 @@ header>div {
 
 #icon-person {
     margin: 10pt 15pt 0 0;
-    padding: 2pt 5pt 3pt 5pt;
+    padding: 6pt 7pt;
     border-radius: 20pt;
     float: right;
     display: block;
@@ -315,7 +318,7 @@ article .legend {
 }
 
 .pagination ul li a {
-    padding: 9pt 0 0 0;
+    padding: 7pt 0 0 0;
     background: var(--primary);
     width: 30pt;
     height: 30pt;
