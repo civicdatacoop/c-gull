@@ -40,7 +40,7 @@
                             <div class="bordered-box">
                                 <label for="author"><a href="#">Author: <em
                                             class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>When the appointment was created.</em></label>
+                                        class="info-box"><br>Who created this appointment.</em></label>
                                 <input type="text" id="author" name="author"
                                        value="&#x1F9CD; Peter Johnson" readonly class="disabled">
                             </div>
@@ -57,8 +57,14 @@
                                 <label for="visit_on"><a href="#">Visit date: <em
                                             class="fa fa-info-circle"></em></a> <em
                                         class="info-box"><br>When did actual appointment happened.</em></label>
-                                <input type="datetime-local" id="visit_on" name="visit_on"
-                                    placeholder="Visit date">
+                                <div class="clear">&nbsp;</div>
+                                <label for="visit_on_booked">Same date and time as the booked one?</label>
+                                <input type="checkbox" id="visit_on_booked" name="visit_on_booked">
+                                <div class="clear"></div>
+                                <p class="no-bottom-m">Or different date and time than the booked one?</p>
+                                <input type="datetime-local" id="visit_on" name="visit_on">
+
+
                             </div>
 
                             <div class="bordered-box">
@@ -183,8 +189,7 @@
                                 <label for="event_time"><a href="#">Date and time: <em
                                             class="fa fa-info-circle"></em></a> <em
                                         class="info-box"><br>Date and time when the event took place.</em></label>
-                                <input type="datetime-local" id="event_time" name="event_time"
-                                    placeholder="Visit date">
+                                <input type="datetime-local" id="event_time" name="event_time">
                                 <div class="clear">&nbsp;</div>
                                 <label for="event_text"><a href="#">Note related to event:
                                         <em class="fa fa-info-circle"></em></a> <em

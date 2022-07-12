@@ -396,6 +396,9 @@ label {
     display: block;
     padding: 0 5pt 0 5pt;
 }
+.content input[type=checkbox] {
+    max-width: 30pt;
+}
 
 .content .big-box {
     width: 100;
