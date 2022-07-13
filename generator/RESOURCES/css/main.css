@@ -508,6 +508,10 @@ input.disabled {
     font-weight: bold;
 }
 
+.small-screen {
+    display: none;
+}
+
 @media (max-width: 640px) {
     #icon-person {
         display: none;
@@ -538,6 +542,25 @@ input.disabled {
     .action-inputs input {
         margin-bottom: 10pt;
     }
+
+    nav {
+        padding-top: 5pt;
+        padding-bottom: 5pt;
+    }
+
+    nav ul li a {
+        padding: 5pt 10pt 5pt 10pt;
+        margin: 5pt 0pt 5pt 15pt;
+        border-radius: 5pt;
+    }
+
+    .big-screen {
+        display: none
+    }
+
+    .small-screen {
+        display: inline
+    }
 }
 
 @media (max-width: 500px) {
@@ -566,17 +589,6 @@ input.disabled {
     .pagination ul li .p-last {
         margin-left: 10pt;
         border-radius: 10pt;
-    }
-
-    nav {
-        padding-top: 5pt;
-        padding-bottom: 5pt;
-    }
-
-    nav ul li a {
-        padding: 5pt 10pt 5pt 10pt;
-        margin: 5pt 0pt 5pt 15pt;
-        border-radius: 5pt;
     }
 
     #logo {

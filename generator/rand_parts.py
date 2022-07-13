@@ -205,3 +205,29 @@ def random_users(count: int = 10) -> list[dict]:
         })
 
     return users
+
+
+def random_appointment_sample(count: int = 10) -> list[dict]:
+    name_of_samples = ['Urine', 'Stool', 'Serum', 'Saliva', 'Blood']
+    attached_files = [
+        'N/A',
+        '<em class="fa fa-file-o"></em>',
+        '<em class="fa fa-file-o"></em> <em class="fa fa-file-o"></em>'
+    ]
+    comments = [
+        'N/A',
+        'Kit was broken',
+        'Blood sample need to be collected separately.'
+    ]
+    appointment_samples = []
+    for position in range(count):
+        appointment_samples.append({
+            'position': position + 1,
+            'name_of_sample': random.choice(name_of_samples),
+            'sample_kit_id': random.randint(1_000_000_000, 9_999_999_999),
+            'collected_by': random.choice(professionals),
+            'date_time': random_date().strftime("%Y/%m/%d %H:%M"),
+            'attached_files': random.choice(attached_files),
+            'comment': random.choice(comments)
+        })
+    return appointment_samples

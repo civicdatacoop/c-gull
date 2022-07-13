@@ -6,7 +6,8 @@ from jinja2 import Environment, FileSystemLoader
 from dataclasses import dataclass
 
 from rand_parts import random_participants, random_person_appointments, \
-    random_study_phases, random_locations, random_itinerary, random_users
+    random_study_phases, random_locations, random_itinerary, random_users, \
+    random_appointment_sample
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
@@ -60,7 +61,8 @@ class Page(object):
                 r_study_phases=random_study_phases(10),
                 r_locations=random_locations(10),
                 r_itinerary=random_itinerary(10),
-                r_users=random_users(10)
+                r_users=random_users(10),
+                r_appointment_samples=random_appointment_sample(10),
             )
             return html_str
 
@@ -218,6 +220,15 @@ pages = [
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="New user"
+         ),
+    Page(title="Samples",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="samples",
+         content_file='page_person_samples.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Samples"
          ),
 ]
 

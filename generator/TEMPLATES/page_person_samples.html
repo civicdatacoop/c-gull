@@ -1,0 +1,99 @@
+<aside>{% include "tag_person_top.html" %}</aside>
+        <article>
+            <section>
+                <div class="content">
+                    <h2 class="no-top-m">Samples collected at the appointment</h2>
+                    <p>You can add or view all samples collected at the specific appointment (related to a particular participant).</p>
+                    <div class="big-box">
+                        <h3>Collected samples:</h3>
+                        <p>List of all samples collected at the appointment.</p>
+                        <table class="main-table bordered-box no-bottom-m">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th><a href="#">Name of the sample <em class="fa fa-caret-down"></em> </a></th>
+                                    <th><a href="#">Sample Kit ID <em class="fa fa-caret-down"></em> </a></th>
+                                    <th><a href="#">Collected by <em class="fa fa-caret-down"></em> </a></th>
+                                    <th><a href="#">Date &amp; Time <em class="fa fa-caret-down"></em> </a></th>
+                                    <th><a href="#">Attached files <em class="fa fa-caret-down"></em> </a></th>
+                                    <th><a href="#">Comment <em class="fa fa-caret-down"></em> </a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for smpl in r_appointment_samples %}
+                            <tr>
+                                <td>{{ smpl['position'] }}</td>
+                                <td><a href="edit_person_appointment.html" class="cell">{{ smpl['name_of_sample'] }}</a></td>
+                                <td><a href="edit_person_appointment.html" class="cell">{{ smpl['sample_kit_id'] }}</a></td>
+                                <td><a href="edit_person_appointment.html" class="cell"><em class="fa fa-user"></em> {{ smpl['collected_by'] }}</a></td>
+                                <td><a href="edit_person_appointment.html" class="cell">{{ smpl['date_time'] }}</a></td>
+                                <td><a href="edit_person_appointment.html" class="cell">{{ smpl['attached_files'] }}</a></td>
+                                <td><a href="edit_person_appointment.html" class="cell">{{ smpl['comment'] }}</a></td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+                        <div class="legend">
+                            Total: 13 entries
+                        </div>
+
+                        {% include "tag_pagination.html" %}
+                    </div>
+
+                    <form action="#">
+
+                            <div class="bordered-box">
+                                <a href="#" class="button"><em class="fa fa-plus"></em> Add new sample</a>
+                            </div>
+                        <div class="big-box">
+                            <h3>New sample</h3>
+
+                            <div class="bordered-box">
+                                <label for="sample_name"><a href="#">Sample name:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Choose appropriate name for the sample (e. g. Urine, Stool, Saliva, Blood).</em></label>
+                                <input type="text" id="sample_name" name="sample_name"
+                                    placeholder="Sample name">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="kit_id"><a href="#">Sample kit ID:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>ID of the kit for samples (e. g. EAN).</em></label>
+                                <input type="text" id="kit_id" name="kit_id"
+                                    placeholder="Sample Kit ID">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="sample_collection"><a href="#">Date and time of collection:* <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>When exactly was a sample collected.</em></label>
+                                <input type="datetime-local" id="sample_collection" name="sample_collection">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="sample_photo"><a href="#">Files: <em
+                                            class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Photo(s) of sample kit(s) (with visible Kit ID). Only .jpg (and .jpeg) files are accepted.</em></label>
+                                <input type="file" id="sample_photo" name="sample_photo" multiple accept=".jpg,.jpeg" >
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="comment_text"><a href="#">Comments:
+                                        <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Any additional comments.</em></label>
+                                <textarea id="comment_text"
+                                    name="comment_text"
+                                    placeholder="Comment"></textarea>
+                            </div>
+
+                        </div>
+
+                        <input type="submit" value="Save">
+                    </form>
+
+                </div>
+            </section>
+            <div class="clear"></div>
+        </article>
