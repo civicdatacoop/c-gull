@@ -167,6 +167,10 @@ article {
     border: 1pt solid var(--font-href-hover);
     border-radius: 10pt;
     font-weight: bold;
+}
+
+aside .button {
+    font-weight: normal;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
@@ -461,7 +465,6 @@ input.disabled {
     }
 
     aside form > * {
-
         margin-bottom: 10pt;
         float: left;
     }
@@ -502,11 +505,16 @@ input.disabled {
     }
     #logo {
         padding-right: 5pt;
-        padding-top: 13pt;
+    }
+    #logo strong {
+        font-weight: normal;
+    }
+    #person-info strong {
+        font-weight: normal;
     }
     #page-nav-top {
         border-left: none;
         padding: 0 0 0 3pt;
-        margin: 12pt 0 0 0;
+        margin: 10pt 0 0 0;
     }
 }
