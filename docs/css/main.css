@@ -561,6 +561,11 @@ input.disabled {
     .small-screen {
         display: inline
     }
+
+    .content .button {
+        display: inline-block;
+        margin-bottom: 10pt;
+    }
 }
 
 @media (max-width: 500px) {
@@ -568,7 +573,8 @@ input.disabled {
         width: 100%;
     }
 
-    .pagination, header {
+    .pagination,
+    header {
         font-family: 'Yanone Kaffeesatz', sans-serif;
     }
 
