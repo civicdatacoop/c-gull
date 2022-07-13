@@ -573,6 +573,12 @@ input.disabled {
         padding-bottom: 5pt;
     }
 
+    nav ul li a {
+        padding: 5pt 10pt 5pt 10pt;
+        margin: 5pt 0pt 5pt 15pt;
+        border-radius: 5pt;
+    }
+
     #logo {
         padding-right: 5pt;
     }
