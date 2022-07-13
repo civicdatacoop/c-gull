@@ -121,6 +121,7 @@ nav ul {
     padding: 0;
     list-style: none;
     display: inline;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 nav ul li {
@@ -166,6 +167,7 @@ article {
     border: 1pt solid var(--font-href-hover);
     border-radius: 10pt;
     font-weight: bold;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .button:hover {
@@ -453,14 +455,14 @@ input.disabled {
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     #icon-person {
         display: none;
     }
 
-    aside .toolbar {
-        width: 100%;
-        margin-top: 10pt;
+    aside form > * {
+
+        margin-bottom: 10pt;
         float: left;
     }
 
@@ -482,5 +484,29 @@ input.disabled {
 
     .action-inputs .button {
         margin-bottom: 10pt;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
+    nav ul li a {
+        padding: 5pt 10pt 5pt 10pt;
+        margin: 5pt 0pt 5pt 15pt;
+        border-radius: 5pt;
+    }
+    nav {
+        padding-top: 5pt;
+        padding-bottom: 5pt;
+    }
+    #logo {
+        padding-right: 5pt;
+        padding-top: 13pt;
+    }
+    #page-nav-top {
+        border-left: none;
+        padding: 0 0 0 3pt;
+        margin: 12pt 0 0 0;
     }
 }

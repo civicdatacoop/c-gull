@@ -8,8 +8,7 @@
                     <option>Ap. due in 14 days</option>
                 </select>
                 <input type="submit" value="&#xf0b0;" class="fa">
-            </form>
-            <div class="toolbar action-inputs float-right">
+
                 <select id="action_location" name="action_location">
                     <option>All locations</option>
                     {% for loc in r_locations %}
@@ -17,6 +16,9 @@
                     {% endfor %}
                 </select>
                 <input type="submit" value="&#xf0b0;" class="fa">
+            </form>
+            <div class="toolbar action-inputs float-right">
+                <a href="edit_location.html" class="button float-right"> <em class="fa fa-bullhorn"></em> &nbsp; Notification </a>
             </div>
             <div class="clear"></div>
         </aside>
