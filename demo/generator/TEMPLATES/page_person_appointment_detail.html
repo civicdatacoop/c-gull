@@ -46,11 +46,51 @@
                             </div>
 
                             <div class="bordered-box">
-                                <label for="booked_on"><a href="#">Booked date: <em
-                                            class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>To which date the appointment is booked (if relevant).</em></label>
-                                <input type="datetime-local" id="booked_on" name="booked_on"
+                                <label for="booked_datetime"><a href="#">Booking of a virtual
+                                        appointment*: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Select the prefered date and time of
+                                        virtual appointment (taken over the phone or
+                                        online).</em></label>
+                                <input type="datetime-local" id="booked_datetime"
+                                    name="booked_datetime">
+                            </div>
+
+                            <div class="bordered-box">
+                                <label for="booked_date"><a href="#">Booking of a physical
+                                        appointment: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Select the prefered date of
+                                        appointment (taken in person)*.</em></label>
+                                <input type="date" id="booked_date" name="booked_date"
                                     placeholder="Booked date">
+
+                                <div class="clear"></div>
+                                <label for="location" class="margin-top-10"><a href="#">Location of
+                                        appointment*: <em class="fa fa-info-circle"></em></a> <em
+                                        class="info-box"><br>Where is the appointment going to
+                                        happen.</em></label>
+                                <select id="location" name="location">
+                                    <option disabled selected>Select prefered location</option>
+                                    <option>All locations</option>
+                                    <option disabled>----</option>
+                                    {% for loc in r_locations %}
+                                    <option>{{ loc['location_name'] }}</option>
+                                    {% endfor %}
+                                </select>
+
+                                <label for="time_slots" class="margin-top-10">
+                                    Available time slots for the location <em>"Room 286, Broadgreen
+                                        Hospital"</em>:
+                                </label>
+                                <div class="time-slots" id="time_slots">
+                                    {% for hour in range(8, 18) %}
+                                    <div class="time-slot">
+                                        <label for="ts_{{ hour }}">{{ hour }}:00 - {{ hour }}:10</label>
+                                        <input type="radio" name="time_slot" id="ts_{{ hour }}">
+                                    </div>
+                                    {% endfor %}
+                                    <div class="clear"></div>
+                                </div>
+
                             </div>
 
                             <div class="bordered-box">
@@ -65,20 +105,6 @@
                                 <input type="datetime-local" id="visit_on" name="visit_on">
 
 
-                            </div>
-
-                            <div class="bordered-box">
-                                <label for="location"><a href="#">Location of appointment: <em
-                                            class="fa fa-info-circle"></em></a> <em
-                                        class="info-box"><br>Where is the appointment going to happen.</em></label>
-                                <select id="location" name="location">
-                                    <option disabled selected>Select location</option>
-                                    <option>Online or over the phone</option>
-                                    <option disabled>----</option>
-                                    {% for loc in r_locations %}
-                                    <option>{{ loc['location_name'] }}</option>
-                                    {% endfor %}
-                                </select>
                             </div>
 
                             <div class="bordered-box">

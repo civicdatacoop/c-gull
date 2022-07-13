@@ -34,7 +34,11 @@ body {
     color: var(--font-main);
     font-size: 12pt;
 }
-input, textarea, select, option {
+
+input,
+textarea,
+select,
+option {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -211,7 +215,8 @@ aside #action-box {
     float: left;
 }
 
-.action-inputs input, .action-inputs select {
+.action-inputs input,
+.action-inputs select {
     border: 1pt solid var(--font-main);
     height: 21pt;
     margin: 0;
@@ -220,7 +225,8 @@ aside #action-box {
     padding: 0;
 }
 
-.action-inputs input[type=text], .action-inputs select {
+.action-inputs input[type=text],
+.action-inputs select {
     width: 150pt;
     height: 21pt;
     padding-left: 5pt;
@@ -406,6 +412,7 @@ label {
     display: block;
     padding: 0 5pt 0 5pt;
 }
+
 .content input[type=checkbox] {
     max-width: 30pt;
 }
@@ -420,6 +427,44 @@ label {
 
 .content .big-box>h3 {
     margin-top: 0;
+}
+
+.time-slots {
+    overflow-x: scroll;
+    width: 100%;
+    white-space: nowrap;
+    border: 1pt solid black;
+    padding: 10pt;
+    background: var(--dark-background);
+}
+
+.time-slot {
+    display: inline-block;
+    width: 120pt;
+    background: var(--font-href);
+    color: var(--primary);
+    border: 1pt solid var(--font-href-hover);
+    margin-left: 15pt;
+}
+
+.time-slot:first-child {
+    margin-left: 0;
+}
+
+.time-slot input {
+    width: 15pt;
+    height: 15pt;
+    margin-top: 4pt;
+    display: inline;
+}
+
+.time-slot label {
+    display: inline;
+
+    float: left;
+    width: 80%;
+    padding: 8pt 0 0 8pt;
+    white-space: nowrap
 }
 
 input.disabled {
@@ -443,6 +488,10 @@ input.disabled {
     margin-left: 10pt
 }
 
+.margin-top-10 {
+    margin-top: 10pt
+}
+
 .content textarea {
     width: 95%;
     min-height: 50pt;
@@ -464,7 +513,7 @@ input.disabled {
         display: none;
     }
 
-    aside form > * {
+    aside form>* {
         margin-bottom: 10pt;
         float: left;
     }
@@ -485,7 +534,8 @@ input.disabled {
         width: 20pt;
     }
 
-    .action-inputs .button {
+    .action-inputs .button,
+    .action-inputs input {
         margin-bottom: 10pt;
     }
 }
@@ -494,24 +544,30 @@ input.disabled {
     header {
         font-family: 'Yanone Kaffeesatz', sans-serif;
     }
+
     nav ul li a {
         padding: 5pt 10pt 5pt 10pt;
         margin: 5pt 0pt 5pt 15pt;
         border-radius: 5pt;
     }
+
     nav {
         padding-top: 5pt;
         padding-bottom: 5pt;
     }
+
     #logo {
         padding-right: 5pt;
     }
+
     #logo strong {
         font-weight: normal;
     }
+
     #person-info strong {
         font-weight: normal;
     }
+
     #page-nav-top {
         border-left: none;
         padding: 0 0 0 3pt;
