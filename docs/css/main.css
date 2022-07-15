@@ -4,6 +4,7 @@
     --gold: #A8A51E;
     --third: #38B3F5;
     --red: #c22626;
+    --green: #26c236;
     --red-dark: #672626;
     --blue: #2690c2;
     --blue-dark: #264c67;
@@ -510,6 +511,23 @@ input.disabled {
 
 .small-screen {
     display: none;
+}
+
+.calendar-table tbody tr {
+    height: 7pt;
+}
+
+.calendar-table tbody tr td.room-free {
+    background: var(--green);
+}
+
+.calendar-table tbody tr td.room-block {
+    background: var(--red);
+}
+
+.calendar-table tbody tr.caption-row td.time-info  {
+    background: var(--primary);
+    padding: 0 10pt 0 10pt;
 }
 
 @media (max-width: 640px) {

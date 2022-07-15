@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 from rand_parts import random_participants, random_person_appointments, \
     random_study_phases, random_locations, random_itinerary, random_users, \
-    random_appointment_sample
+    random_appointment_sample, time_series
 
 # Path to TEMPLATES folder (relative to where you run the script)
 PATH_TO_TEMPLATES = Path('../generator/TEMPLATES/')
@@ -63,6 +63,7 @@ class Page(object):
                 r_itinerary=random_itinerary(10),
                 r_users=random_users(10),
                 r_appointment_samples=random_appointment_sample(10),
+                r_time_series_res_5=time_series()
             )
             return html_str
 
@@ -162,10 +163,19 @@ pages = [
          keywords=comm_keywords,  # noqa: E501
          description=comm_description,  # noqa: E501
          url="locations",
-         content_file='page_locations.html',
+         content_file='page_location_list.html',
          language="en",
          last_mod=datetime.datetime(2022, 1, 1),
          name="Site Locations"
+         ),
+    Page(title="Locations business",
+         keywords=comm_keywords,  # noqa: E501
+         description=comm_description,  # noqa: E501
+         url="location_business",
+         content_file='page_location_business.html',
+         language="en",
+         last_mod=datetime.datetime(2022, 1, 1),
+         name="Locations business"
          ),
     Page(title="Edit location",
          keywords=comm_keywords,  # noqa: E501

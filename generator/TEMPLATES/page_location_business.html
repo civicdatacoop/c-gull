@@ -1,0 +1,57 @@
+
+        <aside>
+            <form action="#" method="get" id="action-box" class="action-inputs">
+                <select id="location_filter" name="location_filter">
+                    <option disabled selected>Filter location</option>
+                    <option>All locations</option>
+                    {% for _loc in r_locations %}
+                    <option>{{ _loc['location_name'] }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="&#xf0b0;" class="fa">
+            </form>
+            <div class="toolbar">
+                <a href="itinerary.html" class="button float-right"> <em class="fa fa-calendar"></em> &nbsp; Itinerary </a>
+            </div>
+            <div class="clear"></div>
+        </aside>
+
+        <article>
+            <table class="main-table calendar-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        {% for _loc in r_locations %}
+                        <th>{{ _loc['location_name'] }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for _t in r_time_series_res_5 %}
+                    {% for _i in range(12) %}
+                    <tr {% if _i == 0 %}class="caption-row"{% endif %}>
+                        {% if _i == 0 %}
+                        <td rowspan="12" class="time-info">{{ _t }}</td>
+                        {% endif %}
+                        {% for _loc in r_locations %}
+                        {% if _loc['position'] % 3 == 0 and _i < 5 %}
+                        <td class="room-block"></td>
+                        {% else %}
+                        <td class="room-free"></td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+            <div class="legend">
+                Total: 23 locations
+            </div>
+
+            <div class="clear"></div>
+        </article>

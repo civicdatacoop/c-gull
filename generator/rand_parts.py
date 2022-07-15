@@ -231,3 +231,18 @@ def random_appointment_sample(count: int = 10) -> list[dict]:
             'comment': random.choice(comments)
         })
     return appointment_samples
+
+
+def time_series(hour_start: int = 8,
+                hour_end: int = 18,
+                resolution_min: int = 5) -> list[str]:
+    current_hour = hour_start - 1
+    time_ser = []
+    current_min = 0
+    for _min in range((hour_end - hour_start) * (60 // resolution_min)):
+        if current_min % 60 == 0:
+            current_hour += 1
+        if current_min % resolution_min == 0:
+            time_ser.append(f"{current_hour:02}:{current_min % 60:02}")
+        current_min += resolution_min
+    return time_ser
